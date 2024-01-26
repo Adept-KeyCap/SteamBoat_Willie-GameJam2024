@@ -21,25 +21,31 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector3 nextPosition;
 
-    private bool canMove; 
+    private bool isMoving; 
 
     // Start is called before the first frame update
     void Start()
     {
-        canMove = true;
+        isMoving = false;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if (canMove)
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
             CheckMovement();
+        }
+        else
+        {
+            nextPosition = AproximatePosition();
+            gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, nextPosition, 2);
         }
     }
 
     private void CheckMovement()
     {
+        /*
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
             if(Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A))
@@ -75,6 +81,15 @@ public class PlayerMovement : MonoBehaviour
                 UpdateMovement(s);
             }
         }
+        */
+
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+
+        isMoving = true;
+
+        Vector3 movement = new Vector3(horizontalInput, verticalInput, 0f) * playerSpeed * Time.fixedDeltaTime;
+        transform.Translate(movement);
     }
 
     private void UpdateMovement(Vector3 direction)
@@ -88,7 +103,7 @@ public class PlayerMovement : MonoBehaviour
     {
         float elapsedTime = 0f;
 
-        canMove = false;
+        isMoving = false;
 
         while (elapsedTime < cooldown)
         {
@@ -99,7 +114,7 @@ public class PlayerMovement : MonoBehaviour
         }
         
         gameObject.transform.position = AproximatePosition();
-        canMove = true;
+        //canMove = true;
     }
 
     private Vector3 AproximatePosition()
