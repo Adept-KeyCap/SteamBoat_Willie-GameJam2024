@@ -18,6 +18,7 @@ public class PlayerManager : MonoBehaviour
     private bool isMoving;
 
     public int health = 0;
+
     public bool isInvincible = false;
     public float invincibleTimer;
     public float timeInvincible = 2.0f;
@@ -38,7 +39,7 @@ public class PlayerManager : MonoBehaviour
             if (invincibleTimer < 0)
             {
                 isInvincible = false;
-
+                invincibleTimer = timeInvincible;
             }
         }
     }
@@ -48,6 +49,9 @@ public class PlayerManager : MonoBehaviour
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
             CheckMovement();
+        }else{
+            isMoving = false;
+            gameObject.GetComponent<Animator>().SetBool("isMoving", isMoving);
         }
     }
 
@@ -59,6 +63,10 @@ public class PlayerManager : MonoBehaviour
         isMoving = true;
 
         Vector3 movement = new Vector3(horizontalInput, verticalInput, 0f) * playerSpeed * Time.fixedDeltaTime;
+        UnityEngine.Debug.Log(movement);
+        gameObject.GetComponent<Animator>().SetBool("isMoving", isMoving);
+        gameObject.GetComponent<Animator>().SetFloat("MoveX", movement.x / (playerSpeed * movCooldown));
+        gameObject.GetComponent<Animator>().SetFloat("MoveY", movement.y / (playerSpeed * movCooldown));
         transform.Translate(movement);
     }
 
