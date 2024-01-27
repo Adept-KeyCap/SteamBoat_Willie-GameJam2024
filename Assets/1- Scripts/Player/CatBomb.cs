@@ -4,23 +4,22 @@ using Unity.Mathematics;
 public class CatBomb : MonoBehaviour
 {
     [SerializeField] private GameObject bomb;
+    [SerializeField] private GameObject box;
     [SerializeField] private GameObject bombom;// Assign your prefab in the Inspector
-    [SerializeField] private float bombCD;
-    [SerializeField] private float boxCD;
-    private float bombTimer;
+    [SerializeField] private float firerate;
+    private float timer;
     private float boxTimer;
     public LayerMask wallLayer;
     public bool isShredded = false;
 
     private void Start()
     {
-        bombTimer = bombCD;
-        boxTimer = boxCD;
+        timer = firerate;
     }
     void Update()
     {
-        bombTimer -= Time.deltaTime;
-        if (bombTimer < 0 && Input.GetMouseButtonDown(1))
+        timer -= Time.deltaTime;
+        if (timer < 0 && Input.GetMouseButtonDown(1))
         {
             Vector3 mousePosition = Input.mousePosition;
             mousePosition.z = 10f; // Set this to be the distance you want the object to be placed in front of the camera
@@ -38,7 +37,7 @@ public class CatBomb : MonoBehaviour
                 }
             }
 
-            bombTimer = bombCD;
+            timer = firerate;
         }  
         
         
