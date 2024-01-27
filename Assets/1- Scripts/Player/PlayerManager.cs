@@ -6,6 +6,7 @@ using System.Net.NetworkInformation;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -20,6 +21,9 @@ public class PlayerManager : MonoBehaviour
     public bool isInvincible = false;
     public float invincibleTimer;
     public float timeInvincible = 2.0f;
+
+    [SerializeField] private List<Image> mouseyWinScreens = new List<Image>();
+    [SerializeField] private List<Image> catWinScreens = new List<Image>();
     
     void Start()
     {
@@ -47,11 +51,6 @@ public class PlayerManager : MonoBehaviour
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
             CheckMovement();
-        }
-        else
-        {
-            nextPosition = AproximatePosition();
-            gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, nextPosition, 2);
         }
     }
 
