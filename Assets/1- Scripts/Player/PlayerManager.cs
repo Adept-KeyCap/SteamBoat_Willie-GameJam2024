@@ -21,9 +21,6 @@ public class PlayerManager : MonoBehaviour
     public bool isInvincible = false;
     public float invincibleTimer;
     public float timeInvincible = 2.0f;
-
-    [SerializeField] private List<Image> mouseyWinScreens = new List<Image>();
-    [SerializeField] private List<Image> catWinScreens = new List<Image>();
     
     void Start()
     {

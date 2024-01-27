@@ -955,6 +955,7 @@ GameObject:
   - component: {fileID: 827389620}
   - component: {fileID: 827389621}
   - component: {fileID: 827389622}
+  - component: {fileID: 827389623}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1109,6 +1110,30 @@ MonoBehaviour:
   timerText: {fileID: 2088880395}
   isPaused: 0
   timeScale: 0
+--- !u!114 &827389623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827389617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c84eaa32340c0c4385149d13c33ed11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemSpawner: {fileID: 827389621}
+  prefab1: {fileID: 0}
+  healthTxt: {fileID: 1697338113}
+  scoreTxt: {fileID: 711337984}
+  mouseyWinScreens:
+  - {fileID: 1845943200}
+  - {fileID: 919629850}
+  - {fileID: 2061779880}
+  catWinScreens:
+  - {fileID: 2046585239}
+  - {fileID: 752251315}
+  - {fileID: 978945933}
 --- !u!1 &908844227
 GameObject:
   m_ObjectHideFlags: 0
@@ -1205,8 +1230,8 @@ RectTransform:
   m_Children:
   - {fileID: 1878874663}
   - {fileID: 1102182837}
-  - {fileID: 187958272}
   - {fileID: 327662915}
+  - {fileID: 187958272}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
