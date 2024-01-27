@@ -20,8 +20,8 @@ public class CatBomb : MonoBehaviour
             Vector3 mousePosition = Input.mousePosition;
             mousePosition.z = 10f; // Set this to be the distance you want the object to be placed in front of the camera
             Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
-
-            if (!IsOverlappingWithObstacles(mousePosition, wallLayer)) // Right click
+            Debug.Log(IsOverlappingWithObstacles(worldPosition, wallLayer));
+            if (!IsOverlappingWithObstacles(worldPosition, wallLayer)) // Right click
             {               
                 Instantiate(prefab, worldPosition, Quaternion.identity);
             }
