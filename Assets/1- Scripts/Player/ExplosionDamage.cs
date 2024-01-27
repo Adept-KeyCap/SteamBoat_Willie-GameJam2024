@@ -4,19 +4,7 @@ using UnityEngine;
 
 public class ExplosionDamage : MonoBehaviour
 {
-    [SerializeField] private float damage;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField] private int damage;
 
     void OnTriggerEnter2D(Collider2D other)
     {

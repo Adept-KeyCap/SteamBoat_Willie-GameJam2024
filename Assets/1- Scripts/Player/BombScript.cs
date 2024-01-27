@@ -28,7 +28,7 @@ public class BombScript : MonoBehaviour
             explosionArea.SetActive(true);
 
             //this.gameObject.SetActive(false);
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
         }
     }
 }
