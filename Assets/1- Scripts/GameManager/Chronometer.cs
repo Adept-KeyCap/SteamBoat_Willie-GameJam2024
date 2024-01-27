@@ -1,17 +1,16 @@
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Chronometer : MonoBehaviour
 {
     [Header("Chronometer Parameters")]
-    [SerializeField] private TextMeshProUGUI timerText; // Reference to the Text component where the timer will be displayed
+    [SerializeField] private TextMeshProUGUI timerText;
 
     private float startTime;
     private float pausedTime;
-    private bool isPaused = false;
+    public bool isPaused = false;
 
-    [SerializeField] private float timeScale;
+    [SerializeField] private float timeScale = 1f; // Default to 1
     private int minutes;
     private int seconds;
 
@@ -24,25 +23,16 @@ public class Chronometer : MonoBehaviour
     {
         if (!isPaused)
         {
-            float currentTime = Time.time - startTime - pausedTime;
-            if (timeScale > 0)
-            {
-                currentTime = (Time.time - startTime - pausedTime) * timeScale;
-                DisplayTime(currentTime);
-            }
-            else
-            {
-                DisplayTime(currentTime);
-            }
+            float currentTime = Time.time - startTime + pausedTime;
+            DisplayTime(currentTime);
         }
 
-        if(Input.GetKeyDown(KeyCode.Escape) && !isPaused)
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            PauseChronometer();
-        }
-        else if(Input.GetKeyDown(KeyCode.Escape) && isPaused)
-        {
-            ResumeChronometer();
+            if (!isPaused)
+                PauseGame();
+            else
+                ResumeGame();
         }
     }
 
@@ -51,9 +41,7 @@ public class Chronometer : MonoBehaviour
         minutes = Mathf.FloorToInt(timePassed / 60);
         seconds = Mathf.FloorToInt(timePassed % 60);
 
-        // Format the time as "00:00"
         string timeText = minutes.ToString("00") + ":" + seconds.ToString("00");
-
         timerText.text = timeText;
     }
 
@@ -63,19 +51,21 @@ public class Chronometer : MonoBehaviour
         isPaused = false;
     }
 
-    public void PauseChronometer()
+    private void PauseGame()
     {
         if (!isPaused)
         {
+            Time.timeScale = 0f; // Pause the game
             pausedTime += Time.time - startTime;
             isPaused = true;
         }
     }
 
-    public void ResumeChronometer()
+    private void ResumeGame()
     {
         if (isPaused)
         {
+            Time.timeScale = 1f; // Resume the game
             startTime = Time.time;
             isPaused = false;
         }
@@ -83,17 +73,10 @@ public class Chronometer : MonoBehaviour
 
     public void ResetChronometer()
     {
+        Time.timeScale = 1f; // Ensure time scale is back to normal when resetting
         startTime = Time.time;
         pausedTime = 0f;
         isPaused = false;
         DisplayTime(0);
-    }
-
-    private void TimeWinner()
-    {
-        if(minutes > 5)
-        {
-            Debug.Log("Cat wins");
-        }
     }
 }
