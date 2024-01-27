@@ -18,6 +18,7 @@ public class PlayerManager : MonoBehaviour
     private bool isMoving;
 
     public int health = 0;
+
     public bool isInvincible = false;
     public float invincibleTimer;
     public float timeInvincible = 2.0f;
@@ -38,7 +39,7 @@ public class PlayerManager : MonoBehaviour
             if (invincibleTimer < 0)
             {
                 isInvincible = false;
-
+                invincibleTimer = timeInvincible;
             }
         }
     }
