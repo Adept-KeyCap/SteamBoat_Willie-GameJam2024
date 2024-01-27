@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 253c1fdbdcff18e4897b06d65379bd07
+guid: 840eaa1efeb28074d9c06c5b291227be
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9137117592129561275
-    second: DOTweenIcon_0
+      213: 2137419830912365582
+    second: miki- 0000_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 150
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -98,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DOTweenIcon_0
+      name: miki- 0000_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1
-        width: 91
-        height: 16
+        x: 45
+        y: 29
+        width: 910
+        height: 960
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 54d1522e5ff623180800000000000000
-      internalID: -9137117592129561275
+      spriteID: e04386df204a9ad10800000000000000
+      internalID: 2137419830912365582
       vertices: []
       indices: 
       edges: []
@@ -129,7 +129,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      DOTweenIcon_0: -9137117592129561275
+      miki- 0000_0: 2137419830912365582
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
