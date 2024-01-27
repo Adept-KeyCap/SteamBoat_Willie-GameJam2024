@@ -5,6 +5,7 @@ using UnityEngine;
 public class BombScript : MonoBehaviour
 {
     [SerializeField] private float bombTimerDuration;
+    [SerializeField] private float timeWhileBombing;
     //[SerializeField] private float dragDuration = 0;
     [SerializeField] private GameObject explosionArea;
     private float bombTimer;
@@ -27,8 +28,18 @@ public class BombScript : MonoBehaviour
         {
             explosionArea.SetActive(true);
 
+            StartCoroutine(WaitWhenExplode(timeWhileBombing));
             //this.gameObject.SetActive(false);
             //Destroy(this.gameObject);
         }
+    }
+
+    private IEnumerator WaitWhenExplode(float time)
+    {
+
+        yield return new WaitForSeconds(time);
+
+        Destroy(gameObject);
+
     }
 }
