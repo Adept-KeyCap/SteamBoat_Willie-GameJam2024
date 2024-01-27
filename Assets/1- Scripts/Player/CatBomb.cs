@@ -3,19 +3,24 @@ using Unity.Mathematics;
 
 public class CatBomb : MonoBehaviour
 {
-    [SerializeField] private GameObject prefab; // Assign your prefab in the Inspector
-    [SerializeField] private float firerate;
-    private float timer;
+    [SerializeField] private GameObject bomb;
+    [SerializeField] private GameObject bombom;// Assign your prefab in the Inspector
+    [SerializeField] private float bombCD;
+    [SerializeField] private float boxCD;
+    private float bombTimer;
+    private float boxTimer;
     public LayerMask wallLayer;
+    public bool isShredded = false;
 
     private void Start()
     {
-        timer = firerate;
+        bombTimer = bombCD;
+        boxTimer = boxCD;
     }
     void Update()
     {
-        timer -= Time.deltaTime;
-        if (timer < 0 && Input.GetMouseButtonDown(1))
+        bombTimer -= Time.deltaTime;
+        if (bombTimer < 0 && Input.GetMouseButtonDown(1))
         {
             Vector3 mousePosition = Input.mousePosition;
             mousePosition.z = 10f; // Set this to be the distance you want the object to be placed in front of the camera
@@ -23,11 +28,20 @@ public class CatBomb : MonoBehaviour
             Debug.Log(IsOverlappingWithObstacles(worldPosition, wallLayer));
             if (!IsOverlappingWithObstacles(worldPosition, wallLayer)) // Right click
             {               
-                Instantiate(prefab, worldPosition, Quaternion.identity);
+                if (isShredded)
+                {
+                    Instantiate(bombom, worldPosition, Quaternion.identity);
+                }
+                else
+                {
+                    Instantiate(bomb, worldPosition, Quaternion.identity);
+                }
             }
 
-            timer = firerate;
-        }       
+            bombTimer = bombCD;
+        }  
+        
+        
     }
 
     bool IsOverlappingWithObstacles(Vector2 position, LayerMask currentLayer)

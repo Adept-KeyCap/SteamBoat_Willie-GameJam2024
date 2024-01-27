@@ -5,9 +5,10 @@ using UnityEngine;
 public class ShreddedTimer : MonoBehaviour
 {
     [SerializeField] private GameObject mousey;
+    [SerializeField] private GameObject catCam;
     private float shreddedCooldownTimer;
     private float shreddedDurationTimer;
-    private float shreddedCooldown = 60.0f;
+    private float shreddedCooldown = 10.0f;
     private float shreddedDuration = 30.0f;
     private int estado = 1;
 
@@ -23,26 +24,28 @@ public class ShreddedTimer : MonoBehaviour
             case 1:
                 if(shreddedCooldownTimer >= 0){
                     shreddedCooldownTimer -= Time.deltaTime;
-                    //Debug.Log("DURATION LEFT: " + shreddedCooldownTimer);
+                    Debug.Log("DURATION LEFT: " + shreddedCooldownTimer);
                 }else{
                     estado = 2;
                 }
                 break;
             case 2:
                 mousey.GetComponent<catDrag>().isShredded = true;
+                catCam.GetComponent<CatBomb>().isShredded = true;
                 shreddedDurationTimer = shreddedDuration;
                 estado = 3;
                 break;
             case 3:
                 if(shreddedDurationTimer >= 0){
                     shreddedDurationTimer -= Time.deltaTime;
-                    //Debug.Log("DURATION LEFT: " + shreddedDurationTimer);
+                    Debug.Log("DURATION LEFT: " + shreddedDurationTimer);
                 }else{
                     estado = 4;
                 }
                 break;
             case 4:
                 mousey.GetComponent<catDrag>().isShredded = false;
+                catCam.GetComponent<CatBomb>().isShredded = false;
                 shreddedCooldownTimer = shreddedCooldown;
                 estado = 1;
                 break;
