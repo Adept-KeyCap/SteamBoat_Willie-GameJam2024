@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -24,6 +25,21 @@ public class PlayerManager : MonoBehaviour
     {
         isMoving = false;
         health = 5;
+        isInvincible = false;
+    }
+
+    private void Update()
+    {
+        if (isInvincible)
+        {
+
+            invincibleTimer -= Time.deltaTime;
+            if (invincibleTimer < 0)
+            {
+                isInvincible = false;
+
+            }
+        }
     }
 
     void FixedUpdate()
