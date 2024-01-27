@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class ItemInventory : MonoBehaviour
 {
-    public int status = 0; 
+    public int status = 0;
+
+    private PlayerManager player;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,7 @@ public class ItemInventory : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
                     Debug.Log("invincible power up pressed");
+                    player.timeInvincible = 4;
                     status = 0;
                 }
                 break;
