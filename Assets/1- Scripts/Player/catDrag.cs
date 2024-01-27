@@ -12,6 +12,7 @@ public class catDrag : MonoBehaviour
     private float dragDurationTimer;
     private float dragCooldownTimer;
     private bool isAvailable;
+    [HideInInspector] public bool isShredded;
     private GameObject mousey;
     private float distance;
     private float appliedForce;
@@ -37,7 +38,7 @@ public class catDrag : MonoBehaviour
             case 3:
                 if (dragDurationTimer > 0) {
                     dragDurationTimer -= Time.deltaTime;
-                    Debug.Log("DURATION LEFT: " + dragDurationTimer);
+                    //Debug.Log("DURATION LEFT: " + dragDurationTimer);
                 }else{
                     isAvailable = false;
                     dragCooldownTimer = dragCooldown;
@@ -47,7 +48,7 @@ public class catDrag : MonoBehaviour
             case 4:
                 if (dragCooldownTimer > 0){
                     dragCooldownTimer -= Time.deltaTime;
-                    Debug.Log("COOLDOWN LEFT: " + dragCooldownTimer);
+                    //Debug.Log("COOLDOWN LEFT: " + dragCooldownTimer);
                 }else{
                     estado = 1;                    
                 }
@@ -56,7 +57,7 @@ public class catDrag : MonoBehaviour
     }
 
     void OnMouseDrag(){
-        if (isAvailable){
+        if (isAvailable && !isShredded){
             if (estado == 1){
                 estado = 2;
             }
