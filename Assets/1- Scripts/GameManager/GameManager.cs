@@ -12,19 +12,18 @@ public class GameManager : MonoBehaviour
     [SerializeField] private ItemSpawner itemSpawner;
 
     [SerializeField] private TextMeshProUGUI healthTxt;
-    [SerializeField] private TextMeshProUGUI scoreTxt;
+    [SerializeField] private TextMeshProUGUI scoreTxt;  
+    public int mouseyScore;
 
     [SerializeField] private List<Image> mouseyWinScreens = new List<Image>();
     [SerializeField] private List<Image> catWinScreens = new List<Image>();
-
-    private int mouseyScore;
 
     [Header("Spawnables")]
     [SerializeField] private GameObject smallCheesePrefab;
     [SerializeField] private GameObject bigCheesePrefab;
     [SerializeField] private GameObject mysteryBoxList;
-    [SerializeField] private int smallCheeseConut;
-    [SerializeField] private int mysteryBoxConut;
+    public int mysteryBoxConut;
+    public int smallCheeseConut;
 
     void Start()
     {
@@ -40,6 +39,7 @@ public class GameManager : MonoBehaviour
             itemSpawner.SpawnItems(smallCheesePrefab);
             smallCheeseConut++;
         }
+
     }
 
     public void UpdateHealth(int currentHealth)
@@ -47,9 +47,9 @@ public class GameManager : MonoBehaviour
         healthTxt.text = currentHealth.ToString();
     }
 
-    public void UpdateScore(int currentScore)
+    public void UpdateScore()
     {
-        scoreTxt.text = currentScore.ToString();
+        scoreTxt.text = mouseyScore.ToString();
     }
 
     public void OnMouseyWin()
