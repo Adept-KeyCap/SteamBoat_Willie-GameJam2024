@@ -19,15 +19,27 @@ public class GameManager : MonoBehaviour
 
     private int mouseyScore;
 
+    [Header("Spawnables")]
+    [SerializeField] private GameObject smallCheesePrefab;
+    [SerializeField] private GameObject bigCheesePrefab;
+    [SerializeField] private GameObject mysteryBoxList;
+    [SerializeField] private int smallCheeseConut;
+    [SerializeField] private int mysteryBoxConut;
+
     void Start()
     {
         itemSpawner = GetComponent<ItemSpawner>();
         mouseyScore = 0;
+        smallCheeseConut = 0;
     }
 
     void Update()
     {
-        
+        while(smallCheeseConut < 5)
+        {
+            itemSpawner.SpawnItems(smallCheesePrefab);
+            smallCheeseConut++;
+        }
     }
 
     public void UpdateHealth(int currentHealth)

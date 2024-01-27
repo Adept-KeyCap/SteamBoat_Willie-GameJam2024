@@ -1123,7 +1123,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemSpawner: {fileID: 827389621}
-  prefab1: {fileID: 0}
   healthTxt: {fileID: 1697338113}
   scoreTxt: {fileID: 711337984}
   mouseyWinScreens:
@@ -1134,6 +1133,11 @@ MonoBehaviour:
   - {fileID: 2046585239}
   - {fileID: 752251315}
   - {fileID: 978945933}
+  smallCheesePrefab: {fileID: 1449947228}
+  bigCheesePrefab: {fileID: 0}
+  mysteryBoxList: {fileID: 0}
+  smallCheeseConut: 0
+  mysteryBoxConut: 0
 --- !u!1 &908844227
 GameObject:
   m_ObjectHideFlags: 0
