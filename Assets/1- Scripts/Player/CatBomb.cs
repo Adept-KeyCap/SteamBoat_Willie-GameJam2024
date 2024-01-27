@@ -24,7 +24,7 @@ public class CatBomb : MonoBehaviour
             Vector3 mousePosition = Input.mousePosition;
             mousePosition.z = 10f; // Set this to be the distance you want the object to be placed in front of the camera
             Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
-            Debug.Log(IsOverlappingWithObstacles(worldPosition, wallLayer));
+            //Debug.Log(IsOverlappingWithObstacles(worldPosition, wallLayer));
             if (!IsOverlappingWithObstacles(worldPosition, wallLayer)) // Right click
             {               
                 if (isShredded)
@@ -38,9 +38,21 @@ public class CatBomb : MonoBehaviour
             }
 
             timer = firerate;
-        }  
-        
-        
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            Vector3 mousePosition = Input.mousePosition;
+            mousePosition.z = 10f; // Set this to be the distance you want the object to be placed in front of the camera
+            Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
+
+            if (!IsOverlappingWithObstacles(worldPosition, wallLayer) && isShredded) // Right click
+            {
+                Instantiate(box, worldPosition, Quaternion.identity);
+            }
+
+        }
+
     }
 
     bool IsOverlappingWithObstacles(Vector2 position, LayerMask currentLayer)
