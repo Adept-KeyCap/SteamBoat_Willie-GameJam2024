@@ -10,26 +10,15 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float playerSpeed;
     [SerializeField] private float movCooldown;
 
-    private Vector3 w = new Vector2(0, 1);
-    private Vector3 w_a = new Vector2(-1, 1);
-    private Vector3 a = new Vector2(-1, 0);
-    private Vector3 a_s = new Vector2(-1, -1);
-    private Vector3 s = new Vector2(0, -1);
-    private Vector3 s_d = new Vector2(1, -1);
-    private Vector3 d = new Vector2(1, 0);
-    private Vector3 d_w = new Vector2(1, 1);
-
     private Vector3 nextPosition;
 
     private bool isMoving; 
 
-    // Start is called before the first frame update
     void Start()
     {
         isMoving = false;
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
@@ -45,44 +34,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void CheckMovement()
     {
-        /*
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
-        {
-            if(Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A))
-            {
-                UpdateMovement(w_a);
-            }
-            else if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.S))
-            {
-                UpdateMovement(a_s);
-            }
-            else if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
-            {
-                UpdateMovement(d_w);
-            }
-            else if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D))
-            {
-                UpdateMovement(s_d);
-            }
-            else if (Input.GetKey(KeyCode.W))
-            {
-                UpdateMovement(w);
-            }
-            else if (Input.GetKey(KeyCode.A))
-            {
-                UpdateMovement(a);
-            }
-            else if (Input.GetKey(KeyCode.D))
-            {
-                UpdateMovement(d);
-            }
-            else if (Input.GetKey(KeyCode.S))
-            {
-                UpdateMovement(s);
-            }
-        }
-        */
-
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
@@ -92,34 +43,8 @@ public class PlayerMovement : MonoBehaviour
         transform.Translate(movement);
     }
 
-    private void UpdateMovement(Vector3 direction)
-    {
-        nextPosition = gameObject.transform.position + direction;
-        
-        StartCoroutine(MovementCooldown(movCooldown));
-    }
-
-    private IEnumerator MovementCooldown(float cooldown)
-    {
-        float elapsedTime = 0f;
-
-        isMoving = false;
-
-        while (elapsedTime < cooldown)
-        {
-            gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, nextPosition, elapsedTime / cooldown);
-
-            elapsedTime += Time.fixedDeltaTime;
-            yield return null;
-        }
-        
-        gameObject.transform.position = AproximatePosition();
-        //canMove = true;
-    }
-
     private Vector3 AproximatePosition()
     {
-
         // Aquí es donde se usa el método math.round para redondear a el número entero más cercano
 
         Vector3 currentPos = gameObject.transform.position;
