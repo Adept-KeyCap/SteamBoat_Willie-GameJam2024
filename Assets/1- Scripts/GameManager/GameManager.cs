@@ -5,22 +5,16 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private ItemSpawner itemSpawner;
-
     [SerializeField] private GameObject prefab1;
 
     void Start()
     {
-        itemSpawner = new ItemSpawner();
+        itemSpawner = GetComponent<ItemSpawner>();
     }
 
     void Update()
     {
         
-    }
-
-    public void SpawnCircle()
-    {
-        itemSpawner.SpawnItems(prefab1);
     }
 
 }
