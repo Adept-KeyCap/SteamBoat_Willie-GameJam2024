@@ -24,7 +24,7 @@ public class ShreddedTimer : MonoBehaviour
             case 1:
                 if(shreddedCooldownTimer >= 0){
                     shreddedCooldownTimer -= Time.deltaTime;
-                    Debug.Log("DURATION LEFT: " + shreddedCooldownTimer);
+                    //Debug.Log("DURATION LEFT: " + shreddedCooldownTimer);
                 }else{
                     estado = 2;
                 }
@@ -38,7 +38,7 @@ public class ShreddedTimer : MonoBehaviour
             case 3:
                 if(shreddedDurationTimer >= 0){
                     shreddedDurationTimer -= Time.deltaTime;
-                    Debug.Log("DURATION LEFT: " + shreddedDurationTimer);
+                    //Debug.Log("DURATION LEFT: " + shreddedDurationTimer);
                 }else{
                     estado = 4;
                 }

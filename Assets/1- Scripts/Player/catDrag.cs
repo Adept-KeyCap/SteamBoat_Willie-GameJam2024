@@ -12,7 +12,7 @@ public class catDrag : MonoBehaviour
     private float dragDurationTimer;
     private float dragCooldownTimer;
     private bool isAvailable;
-    [HideInInspector] public bool isShredded;
+    [HideInInspector] public bool isShredded = false;
     private GameObject mousey;
     private float distance;
     private float appliedForce;
@@ -57,6 +57,7 @@ public class catDrag : MonoBehaviour
     }
 
     void OnMouseDrag(){
+        Debug.Log("Pene");
         if (isAvailable && !isShredded){
             if (estado == 1){
                 estado = 2;
