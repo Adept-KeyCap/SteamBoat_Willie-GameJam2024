@@ -12,22 +12,41 @@ public class GameManager : MonoBehaviour
     [SerializeField] private ItemSpawner itemSpawner;
 
     [SerializeField] private TextMeshProUGUI healthTxt;
-    [SerializeField] private TextMeshProUGUI scoreTxt;
+    [SerializeField] private TextMeshProUGUI scoreTxt;  
+    public int mouseyScore;
 
     [SerializeField] private List<Image> mouseyWinScreens = new List<Image>();
     [SerializeField] private List<Image> catWinScreens = new List<Image>();
 
-    private int mouseyScore;
+    [Header("Spawnables")]
+    [SerializeField] private GameObject bigCheesePrefab;
+    [SerializeField] private GameObject smallCheesePrefab;
+    public int smallCheeseConut;
+    [SerializeField] private GameObject mysteryBoxPrefab;
+    public int mysteryBoxConut;
+    public int mystertBoxSpawnRate;
 
     void Start()
     {
         itemSpawner = GetComponent<ItemSpawner>();
         mouseyScore = 0;
+        smallCheeseConut = 0;
+        InvokeRepeating("MysteryBoxSpawner", 0f, mystertBoxSpawnRate);
+
+        itemSpawner.SpawnItems(mysteryBoxPrefab);
+        itemSpawner.SpawnItems(mysteryBoxPrefab);
+        StartCoroutine(MysteryBoxRespawn());
+
     }
 
     void Update()
     {
-        
+        while(smallCheeseConut < 5)
+        {
+            itemSpawner.SpawnItems(smallCheesePrefab);
+            smallCheeseConut++;
+        }
+
     }
 
     public void UpdateHealth(int currentHealth)
@@ -35,9 +54,9 @@ public class GameManager : MonoBehaviour
         healthTxt.text = currentHealth.ToString();
     }
 
-    public void UpdateScore(int currentScore)
+    public void UpdateScore()
     {
-        scoreTxt.text = currentScore.ToString();
+        scoreTxt.text = mouseyScore.ToString();
     }
 
     public void OnMouseyWin()
@@ -61,5 +80,16 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
 
         SceneManager.LoadScene(0);
+    }
+
+
+    private IEnumerator MysteryBoxRespawn()
+    {
+        itemSpawner.SpawnItems(mysteryBoxPrefab);
+        Debug.Log("A Mystery Box Spawns");
+
+        yield return new WaitForSeconds(mystertBoxSpawnRate);
+
+        StartCoroutine(MysteryBoxRespawn());
     }
 }

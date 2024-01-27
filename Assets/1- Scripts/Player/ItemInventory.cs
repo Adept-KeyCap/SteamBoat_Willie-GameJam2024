@@ -5,12 +5,15 @@ using UnityEngine;
 public class ItemInventory : MonoBehaviour
 {
     public int status = 0;
+    public GameObject redCheese;
 
     private PlayerManager player;
+    private ItemSpawner spawner;
     // Start is called before the first frame update
     void Start()
     {
         int status = 0;
+        spawner = FindFirstObjectByType<ItemSpawner>();
     }
 
     // Update is called once per frame
@@ -38,6 +41,7 @@ public class ItemInventory : MonoBehaviour
             case 3 :
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
+                    spawner.SpawnItems(redCheese);
                     Debug.Log("Red Cheese power up pressed");
                     status = 0;
                 }
