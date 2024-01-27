@@ -1,0 +1,51 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using Random = UnityEngine.Random;
+
+public class PowerUp : MonoBehaviour
+{
+    private int selected = 0;
+
+    private ItemInventory inventory;
+    // Start is called before the first frame update
+    void Start()
+    {
+       selected = Random.Range(1, 4);
+       inventory = FindObjectOfType<ItemInventory>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Mouse")
+        {
+            switch (selected)
+            {
+            case 1:
+                inventory.status = 1;
+                Destroy(gameObject);
+                break;
+            case 2:
+                inventory.status = 2;
+                Destroy(gameObject);
+                break;
+            case 3:
+                inventory.status = 3;
+                Destroy(gameObject);
+                break;
+            default:
+                Debug.Log("El Random no dio");
+                Destroy(gameObject);
+                break;
+            }
+        }
+        
+    }
+}
