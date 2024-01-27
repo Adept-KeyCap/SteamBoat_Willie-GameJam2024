@@ -53,13 +53,6 @@ public class catDrag : MonoBehaviour
                 }
                 break;
         }
-
-        if (dragCooldownTimer > 0){
-            dragCooldownTimer -= Time.deltaTime;
-            Debug.Log("COOLDOWN LEFT: " + dragCooldownTimer);
-        }else{
-            isAvailable = true;
-        }
     }
 
     void OnMouseDrag(){
