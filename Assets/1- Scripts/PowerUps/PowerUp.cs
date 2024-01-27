@@ -24,20 +24,23 @@ public class PowerUp : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Mouse")
+        if (other.gameObject.tag == "Mousey")
         {
             switch (selected)
             {
             case 1:
                 inventory.status = 1;
+                Debug.Log("Power 1");
                 Destroy(gameObject);
                 break;
             case 2:
                 inventory.status = 2;
+                Debug.Log("Power 2");
                 Destroy(gameObject);
                 break;
             case 3:
                 inventory.status = 3;
+                Debug.Log("Power 3");
                 Destroy(gameObject);
                 break;
             default:

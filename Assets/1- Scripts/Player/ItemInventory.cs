@@ -22,27 +22,26 @@ public class ItemInventory : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
                     Debug.Log("invincible power up pressed");
-                    Destroy(gameObject);
+                    status = 0;
                 }
-
                 break;
             case 2 :
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
                     Debug.Log("Ghost mode power up pressed");
-                    Destroy(gameObject);
+                    status = 0;
                 }
                 break;
             case 3 :
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
                     Debug.Log("Red Cheese power up pressed");
-                    Destroy(gameObject);
+                    status = 0;
                 }
                 break;
             default:
                 Debug.Log("default NODEBERIAPASAR power up pressed");
-                Destroy(gameObject);
+                status = 0;
                 break;
         }
     }
