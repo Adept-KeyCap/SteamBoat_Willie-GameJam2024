@@ -19,17 +19,24 @@ public class GameManager : MonoBehaviour
     [SerializeField] private List<Image> catWinScreens = new List<Image>();
 
     [Header("Spawnables")]
-    [SerializeField] private GameObject smallCheesePrefab;
     [SerializeField] private GameObject bigCheesePrefab;
-    [SerializeField] private GameObject mysteryBoxList;
-    public int mysteryBoxConut;
+    [SerializeField] private GameObject smallCheesePrefab;
     public int smallCheeseConut;
+    [SerializeField] private GameObject mysteryBoxPrefab;
+    public int mysteryBoxConut;
+    public int mystertBoxSpawnRate;
 
     void Start()
     {
         itemSpawner = GetComponent<ItemSpawner>();
         mouseyScore = 0;
         smallCheeseConut = 0;
+        InvokeRepeating("MysteryBoxSpawner", 0f, mystertBoxSpawnRate);
+
+        itemSpawner.SpawnItems(mysteryBoxPrefab);
+        itemSpawner.SpawnItems(mysteryBoxPrefab);
+        StartCoroutine(MysteryBoxRespawn());
+
     }
 
     void Update()
@@ -73,5 +80,16 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
 
         SceneManager.LoadScene(0);
+    }
+
+
+    private IEnumerator MysteryBoxRespawn()
+    {
+        itemSpawner.SpawnItems(mysteryBoxPrefab);
+        Debug.Log("A Mystery Box Spawns");
+
+        yield return new WaitForSeconds(mystertBoxSpawnRate);
+
+        StartCoroutine(MysteryBoxRespawn());
     }
 }
