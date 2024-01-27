@@ -4,19 +4,26 @@ using System.Diagnostics;
 using System.Net.NetworkInformation;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerManager : MonoBehaviour
 {
     [SerializeField] private float playerSpeed;
     [SerializeField] private float movCooldown;
 
     private Vector3 nextPosition;
 
-    private bool isMoving; 
+    private bool isMoving;
 
+    public int health = 0;
+    public bool isInvincible = false;
+    public float invincibleTimer;
+    public float timeInvincible = 2.0f;
+    
     void Start()
     {
         isMoving = false;
+        health = 5;
     }
 
     void FixedUpdate()
@@ -45,11 +52,27 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector3 AproximatePosition()
     {
-        // Aquí es donde se usa el método math.round para redondear a el número entero más cercano
+        // Aquï¿½ es donde se usa el mï¿½todo math.round para redondear a el nï¿½mero entero mï¿½s cercano
 
         Vector3 currentPos = gameObject.transform.position;
         Vector3 aproximatePos = new Vector3(math.round(currentPos.x),math.round(currentPos.y));
 
         return aproximatePos;
+    }
+
+    public void TakeDamage(int amount)
+    {
+            if (isInvincible)
+                return;
+
+            isInvincible = true;
+            invincibleTimer = timeInvincible;
+
+            
+            health -= amount;
+            if (health <= 0)
+            {
+                //MOUSEY SE PETATEO, PONGAN LA ANIMACION
+            }
     }
 }
