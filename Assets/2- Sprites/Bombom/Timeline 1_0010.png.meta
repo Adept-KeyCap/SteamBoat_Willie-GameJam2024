@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Timeline 1_0010_0: 6947259202498426384
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
