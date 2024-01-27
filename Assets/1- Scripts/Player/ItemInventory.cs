@@ -12,7 +12,8 @@ public class ItemInventory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        int status = 0;
+        player = FindFirstObjectByType<PlayerManager>();
+        status = 0;
         spawner = FindFirstObjectByType<ItemSpawner>();
     }
 
@@ -27,7 +28,9 @@ public class ItemInventory : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
                     Debug.Log("invincible power up pressed");
-                    player.timeInvincible = 4;
+                    player.isInvincible = true;
+                    player.invincibleTimer = 4f;
+
                     status = 0;
                 }
                 break;
