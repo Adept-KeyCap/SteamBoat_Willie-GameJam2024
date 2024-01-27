@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class ItemSpawner : MonoBehaviour
@@ -8,6 +9,7 @@ public class ItemSpawner : MonoBehaviour
     [SerializeField] private BoxCollider2D spawnCollider;
 
     public LayerMask wallsLayer;
+    public LayerMask itemsLayer;
 
     private int maxIterations = 10;
 
@@ -15,16 +17,13 @@ public class ItemSpawner : MonoBehaviour
     {
         int spawnIterations = 0;
 
-
         while(spawnIterations < maxIterations)
         {
             Vector2 randomPos = GetRandomPosition();
 
-            Debug.Log(IsOverlappingWithObstacles(randomPos));
-
-            if(!IsOverlappingWithObstacles(randomPos))
+            if(!IsOverlappingWithObstacles(randomPos, wallsLayer) && !IsOverlappingWithObstacles(randomPos, itemsLayer))
             {
-                Instantiate(prefab, randomPos, Quaternion.identity);
+                Instantiate(prefab, AproximatePosition(randomPos), Quaternion.identity);
 
                 break;
             }
@@ -35,21 +34,31 @@ public class ItemSpawner : MonoBehaviour
 
     private Vector2 GetRandomPosition()
     {
+        Vector2 minSpawnArea = spawnCollider.bounds.min;
         Vector2 maxSpawnArea = spawnCollider.bounds.max;
-        Vector2 centerSpawnArea = spawnCollider.bounds.center;
 
-        float randomx = UnityEngine.Random.Range(maxSpawnArea.x, centerSpawnArea.x);
-        float randomy = UnityEngine.Random.Range(maxSpawnArea.y, centerSpawnArea.y);
+        float randomX = UnityEngine.Random.Range(minSpawnArea.x, maxSpawnArea.x);
+        float randomY = UnityEngine.Random.Range(minSpawnArea.y, maxSpawnArea.y);
 
-        return new Vector2(randomx, randomy);
+        return new Vector2(randomX, randomY);
     }
 
-    bool IsOverlappingWithObstacles(Vector2 position)
+
+    bool IsOverlappingWithObstacles(Vector2 position, LayerMask currentLayer)
     {
         // Check if there are any colliders at the specified position
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(position, 0.5f, wallsLayer);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(position, 0.5f, currentLayer);
 
         // If there are no colliders, return false (no overlap)
         return colliders.Length > 0;
+    }
+
+    private Vector3 AproximatePosition(Vector3 currentPosition)
+    {
+        // Aquí es donde se usa el método math.round para redondear a el número entero más cercano
+
+        Vector3 aproximatePos = new Vector3(math.round(currentPosition.x), math.round(currentPosition.y));
+
+        return aproximatePos;
     }
 }

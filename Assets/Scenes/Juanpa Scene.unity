@@ -854,6 +854,9 @@ MonoBehaviour:
   wallsLayer:
     serializedVersion: 2
     m_Bits: 128
+  itemsLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &908844227
 GameObject:
   m_ObjectHideFlags: 0
@@ -7213,7 +7216,7 @@ CompositeCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
+  m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
   m_ColliderPaths:
@@ -7925,7 +7928,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1449947230}
   - component: {fileID: 1449947229}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
