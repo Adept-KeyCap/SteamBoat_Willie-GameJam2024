@@ -184,21 +184,20 @@ MonoBehaviour:
   itemSpawner: {fileID: 2755657958682421066}
   healthTxt: {fileID: 0}
   scoreTxt: {fileID: 0}
+  score2WinTxt: {fileID: 0}
   mouseyScore: 0
-  mouseyWinScreens:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  catWinScreens:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  scoreToWin: 25
+  mouseyWinScreens: []
+  catWinScreens: []
   bigCheesePrefab: {fileID: 1560425141127394375, guid: 9f2cf23c834f437459633af1c8855ea8, type: 3}
   smallCheesePrefab: {fileID: 5467058713252804004, guid: 792d19d7d126d0748ae525bf748dce4e, type: 3}
   smallCheeseConut: 0
   mysteryBoxPrefab: {fileID: 2602912769880466186, guid: 9c96425899a3b084e8e37bf1c9a67046, type: 3}
   mysteryBoxConut: 0
   mystertBoxSpawnRate: 45
+  gatoWins: {fileID: 0}
+  mouseyWins: {fileID: 0}
+  uiGameObj: {fileID: 0}
 --- !u!114 &8040853415991270979
 MonoBehaviour:
   m_ObjectHideFlags: 0
