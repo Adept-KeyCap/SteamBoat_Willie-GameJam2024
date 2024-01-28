@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8800890831250837106}
   - component: {fileID: 6903475584354900805}
-  - component: {fileID: 2563559031112403973}
   - component: {fileID: 7908870282157639952}
+  - component: {fileID: 5011874003090994494}
   m_Layer: 8
   m_Name: RedCheese
   m_TagString: Untagged
@@ -86,18 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2563559031112403973
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1560425141127394375}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a57c4f9c8a2a63849ba2f1e98d96b3dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!58 &7908870282157639952
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -134,3 +122,16 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0.21133333}
   m_Radius: 0.5
+--- !u!114 &5011874003090994494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560425141127394375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b25d359f9e9e19f48adac9426f291e98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreGvien: 2
