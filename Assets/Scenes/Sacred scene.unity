@@ -803,11 +803,11 @@ PrefabInstance:
       objectReference: {fileID: 1383795992}
     - target: {fileID: 1554525228449433980, guid: 7ebeb69fe643aae4d81dbf3619dd946f, type: 3}
       propertyPath: catWinTime
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1554525228449433980, guid: 7ebeb69fe643aae4d81dbf3619dd946f, type: 3}
       propertyPath: playfulTime
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1982225492313166127, guid: 7ebeb69fe643aae4d81dbf3619dd946f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -877,6 +877,10 @@ PrefabInstance:
       propertyPath: mouseyWins
       value: 
       objectReference: {fileID: 1269157255}
+    - target: {fileID: 5978164837915827228, guid: 7ebeb69fe643aae4d81dbf3619dd946f, type: 3}
+      propertyPath: scoreToWin
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 5978164837915827228, guid: 7ebeb69fe643aae4d81dbf3619dd946f, type: 3}
       propertyPath: score2WinTxt
       value: 
