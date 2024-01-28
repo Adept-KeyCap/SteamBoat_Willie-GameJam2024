@@ -7,6 +7,7 @@ public class CatBomb : MonoBehaviour
     [SerializeField] private GameObject box;
     [SerializeField] private GameObject bombom;// Assign your prefab in the Inspector
     [SerializeField] private float firerate;
+    [SerializeField] private float boxFirerate;
     private float timer;
     private float boxTimer;
     public LayerMask wallLayer;
@@ -15,10 +16,13 @@ public class CatBomb : MonoBehaviour
     private void Start()
     {
         timer = firerate;
+        boxTimer = boxFirerate;
     }
     void Update()
     {
         timer -= Time.deltaTime;
+        boxTimer -= Time.deltaTime;
+
         if (timer < 0 && Input.GetMouseButtonDown(1))
         {
             Vector3 mousePosition = Input.mousePosition;
@@ -40,7 +44,7 @@ public class CatBomb : MonoBehaviour
             timer = firerate;
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (boxTimer < 0 && Input.GetMouseButtonDown(0))
         {
             Vector3 mousePosition = Input.mousePosition;
             mousePosition.z = 10f; // Set this to be the distance you want the object to be placed in front of the camera
@@ -51,6 +55,7 @@ public class CatBomb : MonoBehaviour
                 Instantiate(box, worldPosition, Quaternion.identity);
             }
 
+            boxTimer = boxFirerate;
         }
 
     }
