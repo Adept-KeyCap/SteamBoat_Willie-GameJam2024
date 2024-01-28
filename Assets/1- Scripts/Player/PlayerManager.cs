@@ -120,7 +120,7 @@ public class PlayerManager : MonoBehaviour
         gameObject.GetComponent<Animator>().SetTrigger("Damaged");
         invincibleTimer = timeInvincible;
 
-        cat.status = 1; //  Happy Scream  
+        cat.HappyScream(); //  Happy Scream  
         health -= amount;
         if (health <= 0)
         {

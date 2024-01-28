@@ -5,34 +5,47 @@ using UnityEngine;
 public class CatCheesyManager : MonoBehaviour
 {
     public int status = 0;
-
+    private Animator anim;
     private PlayerManager player;
     // Start is called before the first frame update
     void Start()
     {
         player = FindFirstObjectByType<PlayerManager>();
         status = 0;
+        anim = GetComponent<Animator>();
+        anim.Play("Idle");
     }
 
     // Update is called once per frame
-    void Update()
+  
+
+    public void Idle()
     {
-        switch (status)
-        {
-            case 0:
-                break;
-            case 1:
-                break;
-            case 2:
-                break;
-            case 3:
-                break;
-            case 4:
-                break;
-            case 5:
-                break;
-            default:
-                break;
-        }
+        anim.Play("Idle");
+    }
+
+    public void HappyScream()
+    {
+        
+    }
+
+    public void Angry()
+    {
+        
+    }
+
+    public void Playful()
+    {
+        
+    }
+
+    public void Syringe()
+    {
+        
+    }
+
+    public void Shredded()
+    {
+        
     }
 }
