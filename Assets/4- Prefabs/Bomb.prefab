@@ -233,6 +233,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4abfafa70797f6245846912648217f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bombTimerDuration: 1.8
+  bombTimerDuration: 1.4
   timeWhileBombing: 1
   explosionArea: {fileID: 390655017465269145}

@@ -8,8 +8,8 @@ public class ShreddedTimer : MonoBehaviour
     [SerializeField] private GameObject catCam;
     private float shreddedCooldownTimer;
     private float shreddedDurationTimer;
-    private float shreddedCooldown = 10.0f;
-    private float shreddedDuration = 30.0f;
+    [SerializeField] private float shreddedCooldown = 10.0f;
+    [SerializeField] private float shreddedDuration = 30.0f;
     private int estado = 1;
 
     void Start()

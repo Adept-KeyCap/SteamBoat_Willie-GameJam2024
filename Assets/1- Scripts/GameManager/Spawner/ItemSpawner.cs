@@ -11,7 +11,15 @@ public class ItemSpawner : MonoBehaviour
     public LayerMask wallsLayer;
     public LayerMask itemsLayer;
 
+    private Vector2 minSpawnArea;
+    private Vector2 maxSpawnArea;
+
     private int maxIterations = 10;
+
+    private void Awake() {
+        minSpawnArea = spawnCollider.bounds.min;
+        maxSpawnArea = spawnCollider.bounds.max;
+    }
 
     public void SpawnItems(GameObject prefab)
     {
@@ -34,12 +42,10 @@ public class ItemSpawner : MonoBehaviour
 
     private Vector2 GetRandomPosition()
     {
-        Vector2 minSpawnArea = spawnCollider.bounds.min;
-        Vector2 maxSpawnArea = spawnCollider.bounds.max;
-
+       
         float randomX = UnityEngine.Random.Range(minSpawnArea.x, maxSpawnArea.x);
         float randomY = UnityEngine.Random.Range(minSpawnArea.y, maxSpawnArea.y);
-
+        spawnCollider.enabled = false;
         return new Vector2(randomX, randomY);
     }
 
@@ -55,7 +61,7 @@ public class ItemSpawner : MonoBehaviour
 
     private Vector3 AproximatePosition(Vector3 currentPosition)
     {
-        // Aquí es donde se usa el método math.round para redondear a el número entero más cercano
+        // Aquï¿½ es donde se usa el mï¿½todo math.round para redondear a el nï¿½mero entero mï¿½s cercano
 
         Vector3 aproximatePos = new Vector3(math.round(currentPosition.x), math.round(currentPosition.y));
 

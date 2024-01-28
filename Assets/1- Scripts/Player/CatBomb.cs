@@ -66,7 +66,7 @@ public class CatBomb : MonoBehaviour
 
     private Vector3 AproximatePosition(Vector3 currentPosition)
     {
-        // Aquí es donde se usa el método math.round para redondear a el número entero más cercano
+        // Aquï¿½ es donde se usa el mï¿½todo math.round para redondear a el nï¿½mero entero mï¿½s cercano
 
         Vector3 aproximatePos = new Vector3(math.round(currentPosition.x), math.round(currentPosition.y));
 
