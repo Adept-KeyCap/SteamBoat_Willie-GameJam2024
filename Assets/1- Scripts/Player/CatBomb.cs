@@ -77,8 +77,8 @@ public class CatBomb : MonoBehaviour
             if (!IsOverlappingWithObstacles(worldPosition, wallLayer) && isShredded) // Right click
             {
                 Instantiate(box, worldPosition, Quaternion.identity);
-            }
-            audioManager.Play_catBox_drop_SFX();
+                audioManager.Play_catBox_drop_SFX();
+            }           
             boxTimer = boxFirerate;
         }
         if (boxTimer > 0)

@@ -10,6 +10,7 @@ public class catDrag : MonoBehaviour
     [SerializeField] private float dragCooldown;
     [SerializeField] private float dragDuration = 0;
     [SerializeField] private float maxForceDistance;
+    private AudioManager audioManager;
     private float dragDurationTimer;
     private float dragCooldownTimer;
     private bool isAvailable;
@@ -24,6 +25,8 @@ public class catDrag : MonoBehaviour
     void Start()
     {
         mousey = gameObject;
+
+        audioManager = FindFirstObjectByType<AudioManager>();
     }
 
     // Update is called once per frame
@@ -36,6 +39,7 @@ public class catDrag : MonoBehaviour
             case 2:
                 dragDurationTimer = dragDuration;
                 gameObject.GetComponent<Animator>().SetBool("isGrabbed", true);
+                audioManager.Play_catDrag_SFX();
                 estado = 3;
                 break;
             case 3:
@@ -79,6 +83,7 @@ public class catDrag : MonoBehaviour
                     appliedForce = (distance / maxForceDistance * maxForce) * Time.deltaTime;
                     mousey.transform.position = Vector2.MoveTowards(mousey.transform.position, mouseWorldPos, appliedForce);
                 }
+                
             }            
         }
     }
