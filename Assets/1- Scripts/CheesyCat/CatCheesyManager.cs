@@ -26,26 +26,41 @@ public class CatCheesyManager : MonoBehaviour
 
     public void HappyScream()
     {
-        
+        if (anim.GetBool("IsPlayful") == false)
+        {
+            anim.Play("CheesyCatHappyScream");
+        }
     }
 
     public void Angry()
     {
-        
+        if (anim.GetBool("IsPlayful") == false)
+        {
+            anim.Play("CheesyCatAngry");
+        }
     }
 
     public void Playful()
     {
-        
+        anim.Play("CheesyCatPlayful");
+        anim.SetBool("IsPlayful", true);
     }
 
     public void Syringe()
     {
-        
+        anim.SetBool("IsSyringe", true);
+        anim.Play("CheesyCatSyringe");
     }
 
     public void Shredded()
     {
-        
+        anim.SetBool("IsShredded", true);
+        anim.Play("CheesyCatShredded");
     }
+
+    public void ShreddedOff()
+    {
+        anim.SetBool("IsShredded", false);
+    }
+    
 }

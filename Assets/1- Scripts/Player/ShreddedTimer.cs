@@ -11,9 +11,10 @@ public class ShreddedTimer : MonoBehaviour
     [SerializeField] private float shreddedCooldown = 10.0f;
     [SerializeField] private float shreddedDuration = 30.0f;
     private int estado = 1;
-
+    private CatCheesyManager cat;
     void Start()
     {
+        cat = FindFirstObjectByType<CatCheesyManager>();
         shreddedCooldownTimer = shreddedCooldown;
     }
 
@@ -33,6 +34,7 @@ public class ShreddedTimer : MonoBehaviour
                 mousey.GetComponent<catDrag>().isShredded = true;
                 catCam.GetComponent<CatBomb>().isShredded = true;
                 shreddedDurationTimer = shreddedDuration;
+                cat.Syringe();
                 estado = 3;
                 break;
             case 3:
@@ -47,6 +49,7 @@ public class ShreddedTimer : MonoBehaviour
                 mousey.GetComponent<catDrag>().isShredded = false;
                 catCam.GetComponent<CatBomb>().isShredded = false;
                 shreddedCooldownTimer = shreddedCooldown;
+                cat.ShreddedOff();
                 estado = 1;
                 break;
         }

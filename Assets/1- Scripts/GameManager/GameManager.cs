@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private Texture2D cursorClic;
 
+    private CatCheesyManager cat;
     void Start()
     {
         itemSpawner = GetComponent<ItemSpawner>();
@@ -48,6 +49,8 @@ public class GameManager : MonoBehaviour
         StartCoroutine(MysteryBoxRespawn());
 
         score2WinTxt.text = "/ " + scoreToWin.ToString();
+        
+        cat = FindFirstObjectByType<CatCheesyManager>();
 
     }
 
@@ -76,7 +79,7 @@ public class GameManager : MonoBehaviour
     public void UpdateScore()
     {
         scoreTxt.text = "x " + mouseyScore.ToString();
-
+        cat.Angry();
         if(mouseyScore >= scoreToWin)
         {
             OnMouseyWin();

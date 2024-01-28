@@ -14,9 +14,12 @@ public class Chronometer : MonoBehaviour
     private int minutes;
     private int seconds;
 
+    private CatCheesyManager cat;
     void Start()
     {
+        cat = FindFirstObjectByType<CatCheesyManager>();
         StartChronometer();
+        
     }
 
     void Update()
@@ -33,6 +36,11 @@ public class Chronometer : MonoBehaviour
                 PauseGame();
             else
                 ResumeGame();
+        }
+
+        if (seconds >= 50)
+        {
+            cat.Playful();
         }
     }
 

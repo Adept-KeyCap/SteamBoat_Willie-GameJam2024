@@ -140,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Ola_2_0: -5535322198763210378
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
