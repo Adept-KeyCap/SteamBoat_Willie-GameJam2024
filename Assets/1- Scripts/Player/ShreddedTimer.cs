@@ -62,7 +62,7 @@ public class ShreddedTimer : MonoBehaviour
     private IEnumerator CatTransition()
     {
         
-        yield return new WaitForSeconds(1/3);
+        yield return new WaitForSeconds(7/5);
 
         transitionBox.GetComponent<Animator>().SetTrigger("Transition");
     }

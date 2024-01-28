@@ -48,8 +48,8 @@ public class Chronometer : MonoBehaviour
         minutes = Mathf.FloorToInt(timePassed / 60);
         seconds = Mathf.FloorToInt(timePassed % 60);
 
-        if(minutes >= 4){
-            animCat.SetBool("isPlayful", true);
+        if(minutes >= 1){
+            animCat.SetBool("IsPlayful", true);
         }
 
         string timeText = minutes.ToString("00") + ":" + seconds.ToString("00");
