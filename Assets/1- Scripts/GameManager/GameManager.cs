@@ -39,6 +39,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject cat;
     private Animator animCat;
 
+    [SerializeField] private GameObject limitMap;
+
     void Start()
     {
         itemSpawner = GetComponent<ItemSpawner>();
@@ -52,6 +54,7 @@ public class GameManager : MonoBehaviour
         animCat = cat.GetComponent<Animator>();
         score2WinTxt.text = "/ " + scoreToWin.ToString();
         
+        limitMap.SetActive(true);
         
 
     }
