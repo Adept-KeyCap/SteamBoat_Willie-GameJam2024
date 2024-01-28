@@ -15,8 +15,11 @@ public class ItemInventory : MonoBehaviour
     [SerializeField] private Sprite invincible; 
     [SerializeField] private Sprite redCheeze; 
     [SerializeField] private Sprite phantom; 
-    [SerializeField] private Sprite blank; 
-    // Start is called before the first frame update
+    [SerializeField] private Sprite blank;
+    // Start is
+    // called before the first frame update
+    [SerializeField] private ParticleSystem cantTouchMe;
+
     void Start()
     {
         player = FindFirstObjectByType<PlayerManager>();
@@ -38,6 +41,7 @@ public class ItemInventory : MonoBehaviour
                     Debug.Log("invincible power up pressed");
                     player.isInvincible = true;
                     player.invincibleTimer = 4f;
+                    StartCoroutine(InvincibleVFX());
                     itemHolder.GetComponent<Image>().sprite = blank;
                     status = 0;
                 }
@@ -85,5 +89,12 @@ public class ItemInventory : MonoBehaviour
 
                 break;
         }
+    }
+
+    IEnumerator InvincibleVFX()
+    {
+        cantTouchMe.Play();
+        yield return new WaitForSeconds(4);
+        cantTouchMe.Stop();
     }
 }
