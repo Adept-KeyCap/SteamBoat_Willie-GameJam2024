@@ -14,7 +14,7 @@ public class PowerUp : MonoBehaviour
     void Start()
     {
        selected = Random.Range(1, 4);
-       inventory = FindObjectOfType<ItemInventory>();
+       inventory = FindFirstObjectByType<ItemInventory>();
     }
 
     // Update is called once per frame

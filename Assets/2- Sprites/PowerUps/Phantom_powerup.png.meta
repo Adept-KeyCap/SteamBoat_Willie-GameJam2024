@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Phantom_powerup_0: 5327130659187713666
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
