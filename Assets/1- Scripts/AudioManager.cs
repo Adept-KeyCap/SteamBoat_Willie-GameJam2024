@@ -55,7 +55,7 @@ public class AudioManager : MonoBehaviour
 
     public void Play_redCheese_SFX()
     {
-        catBomb_drop_SFX.Play();
+        redCheese_SFX.Play();
     }
 
     public void Play_phantom_SFX()
