@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      quesito rojo_0: -431869805396780207
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
