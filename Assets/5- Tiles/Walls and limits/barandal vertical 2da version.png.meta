@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b712a226f8155684da72924b8a51f877
+guid: 38f2e8f9c7462ea499cd709ddc7367a3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1564696673496076314
-    second: pared lamina (opcional)_0
+      213: -1473070374052468934
+    second: barandal vertical 2da version_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,7 +98,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pared lamina (opcional)_0
+      name: barandal vertical 2da version_0
       rect:
         serializedVersion: 2
         x: 0
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6efe7036aa4194ae0800000000000000
-      internalID: -1564696673496076314
+      spriteID: a376379ac4a9e8be0800000000000000
+      internalID: -1473070374052468934
       vertices: []
       indices: 
       edges: []
@@ -129,7 +129,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      pared lamina (opcional)_0: -1564696673496076314
+      barandal vertical 2da version_0: -1473070374052468934
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

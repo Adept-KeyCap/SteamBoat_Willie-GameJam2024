@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b712a226f8155684da72924b8a51f877
+guid: 9b7d73cf1804fea409b4cdb40f99c515
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1564696673496076314
-    second: pared lamina (opcional)_0
+      213: -727949173951143067
+    second: diagonal bote parte de abajo3_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,7 +98,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pared lamina (opcional)_0
+      name: diagonal bote parte de abajo3_0
       rect:
         serializedVersion: 2
         x: 0
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6efe7036aa4194ae0800000000000000
-      internalID: -1564696673496076314
+      spriteID: 5636a18451ec5e5f0800000000000000
+      internalID: -727949173951143067
       vertices: []
       indices: 
       edges: []
@@ -129,7 +129,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      pared lamina (opcional)_0: -1564696673496076314
+      diagonal bote parte de abajo3_0: -727949173951143067
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

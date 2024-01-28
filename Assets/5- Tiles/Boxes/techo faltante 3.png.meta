@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b712a226f8155684da72924b8a51f877
+guid: 31b3270ade220ec4cac832dadc1eae3c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1564696673496076314
-    second: pared lamina (opcional)_0
+      213: -2682824743582851318
+    second: techo faltante 3_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,7 +98,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pared lamina (opcional)_0
+      name: techo faltante 3_0
       rect:
         serializedVersion: 2
         x: 0
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6efe7036aa4194ae0800000000000000
-      internalID: -1564696673496076314
+      spriteID: a0f9d142c11b4cad0800000000000000
+      internalID: -2682824743582851318
       vertices: []
       indices: 
       edges: []
@@ -129,7 +129,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      pared lamina (opcional)_0: -1564696673496076314
+      techo faltante 3_0: -2682824743582851318
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
