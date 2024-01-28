@@ -120,6 +120,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &141741162 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6565664732241050288, guid: 5fe0a63a834cfad4486c8bcaec7ab834, type: 3}
+  m_PrefabInstance: {fileID: 451819791}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &451819791
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -254,6 +259,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5978164837915827228, guid: 7ebeb69fe643aae4d81dbf3619dd946f, type: 3}
+      propertyPath: cursorClic
+      value: 
+      objectReference: {fileID: 2800000, guid: bbde2db17eec13d45aa81a49d1389e84, type: 3}
+    - target: {fileID: 5978164837915827228, guid: 7ebeb69fe643aae4d81dbf3619dd946f, type: 3}
+      propertyPath: cursorIdle
+      value: 
+      objectReference: {fileID: 2800000, guid: 6df8f0da58f539d46803703d5a7dc48e, type: 3}
+    - target: {fileID: 5978164837915827228, guid: 7ebeb69fe643aae4d81dbf3619dd946f, type: 3}
       propertyPath: bigCheesePrefab
       value: 
       objectReference: {fileID: 1560425141127394375, guid: 9f2cf23c834f437459633af1c8855ea8, type: 3}
@@ -264,7 +277,7 @@ PrefabInstance:
     - target: {fileID: 8040853415991270979, guid: 7ebeb69fe643aae4d81dbf3619dd946f, type: 3}
       propertyPath: catCam
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 141741162}
     - target: {fileID: 8040853415991270979, guid: 7ebeb69fe643aae4d81dbf3619dd946f, type: 3}
       propertyPath: mousey
       value: 

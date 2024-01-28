@@ -34,6 +34,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameObject uiGameObj;
 
+    [SerializeField] private Texture2D cursorClic;
+
     void Start()
     {
         itemSpawner = GetComponent<ItemSpawner>();
@@ -51,6 +53,14 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        /*
+        if(Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1)){
+            Debug.Log("HOLA");
+            Cursor.SetCursor(cursorClic, new Vector2(0, 256), CursorMode.Auto);
+        }else{
+            Debug.Log("Adios");
+            Cursor.SetCursor(null, new Vector2(0, 256), CursorMode.Auto); //null usa el default cursor
+        }*/
         while(smallCheeseConut < 5)
         {
             itemSpawner.SpawnItems(smallCheesePrefab);
