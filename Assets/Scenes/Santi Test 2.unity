@@ -449,6 +449,7 @@ GameObject:
   - component: {fileID: 827389621}
   - component: {fileID: 827389622}
   - component: {fileID: 827389623}
+  - component: {fileID: 827389624}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -617,6 +618,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mousey: {fileID: 691868694}
   catCam: {fileID: 519420028}
+--- !u!114 &827389624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827389617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c84eaa32340c0c4385149d13c33ed11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemSpawner: {fileID: 0}
+  healthTxt: {fileID: 0}
+  scoreTxt: {fileID: 0}
+  mouseyScore: 0
+  mouseyWinScreens: []
+  catWinScreens: []
+  bigCheesePrefab: {fileID: 0}
+  smallCheesePrefab: {fileID: 0}
+  smallCheeseConut: 0
+  mysteryBoxPrefab: {fileID: 0}
+  mysteryBoxConut: 0
+  mystertBoxSpawnRate: 0
 --- !u!1 &908844227
 GameObject:
   m_ObjectHideFlags: 0
