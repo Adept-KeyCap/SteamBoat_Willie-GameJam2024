@@ -28,11 +28,13 @@ public class PlayerManager : MonoBehaviour
     public float ghostTimer;
     public float timeGhost = 4.0f;
     public bool isGhost = false;
-    
+
+
+    private CatCheesyManager cat;
     void Start()
     {
         gameManager = FindFirstObjectByType<GameManager>();
-
+        cat = FindFirstObjectByType<CatCheesyManager>();
         isMoving = false;
         health = 5;
         isInvincible = false;
@@ -118,7 +120,7 @@ public class PlayerManager : MonoBehaviour
         gameObject.GetComponent<Animator>().SetTrigger("Damaged");
         invincibleTimer = timeInvincible;
 
-            
+        cat.status = 1; //  Happy Scream  
         health -= amount;
         if (health <= 0)
         {
