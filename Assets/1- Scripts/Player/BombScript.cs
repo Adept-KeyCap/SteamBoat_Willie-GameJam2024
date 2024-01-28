@@ -11,12 +11,14 @@ public class BombScript : MonoBehaviour
     private float bombTimer;
     //private float dragCooldownTimer;
     //private bool isAvailable;
-
+    private AudioManager audioManager;
     // Start is called before the first frame update
     void Start()
     {
         explosionArea.SetActive(false);
         bombTimer = bombTimerDuration;
+
+        audioManager = FindFirstObjectByType<AudioManager>();
     }
 
     // Update is called once per frame
@@ -37,8 +39,8 @@ public class BombScript : MonoBehaviour
     private IEnumerator WaitWhenExplode(float time)
     {
 
+        audioManager.Play_bombExplotion_SFX();
         yield return new WaitForSeconds(time);
-
         Destroy(gameObject);
 
     }

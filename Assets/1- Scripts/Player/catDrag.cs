@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Image = UnityEngine.UI.Image;
 
 public class catDrag : MonoBehaviour
 {
@@ -17,7 +18,8 @@ public class catDrag : MonoBehaviour
     private float distance;
     private float appliedForce;
     private int estado = 1;
-
+    
+    [SerializeField] private Image cDDragBG;
     // Start is called before the first frame update
     void Start()
     {
@@ -50,6 +52,7 @@ public class catDrag : MonoBehaviour
             case 4:
                 if (dragCooldownTimer > 0){
                     dragCooldownTimer -= Time.deltaTime;
+                    cDDragBG.fillAmount = 1-(dragCooldownTimer / dragCooldown);
                     //Debug.Log("COOLDOWN LEFT: " + dragCooldownTimer);
                 }else{
                     estado = 1;                    
