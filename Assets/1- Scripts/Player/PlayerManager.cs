@@ -7,12 +7,14 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
+using Debug = System.Diagnostics.Debug;
 
 public class PlayerManager : MonoBehaviour
 {
     [SerializeField] private float playerSpeed;
     [SerializeField] private float movCooldown;
-
+    [SerializeField] private LayerMask walls;
+    [SerializeField] private LayerMask nothingLayer;
     private Vector3 nextPosition;
 
     private bool isMoving;
@@ -22,12 +24,16 @@ public class PlayerManager : MonoBehaviour
     public bool isInvincible = false;
     public float invincibleTimer;
     public float timeInvincible = 2.0f;
+    public float ghostTimer;
+    public float timeGhost = 4.0f;
+    public bool isGhost = false;
     
     void Start()
     {
         isMoving = false;
         health = 5;
         isInvincible = false;
+        isGhost = false;
     }
 
     private void Update()
@@ -42,6 +48,21 @@ public class PlayerManager : MonoBehaviour
                 invincibleTimer = timeInvincible;
             }
         }
+
+        if (isGhost)
+        {
+            UnityEngine.Debug.Log("Ghosting Happening");
+            gameObject.GetComponent<CircleCollider2D>().excludeLayers = walls;
+            ghostTimer -= Time.deltaTime;
+            if (ghostTimer < 0)
+            {
+                isGhost = false;
+                ghostTimer = timeGhost;
+                gameObject.GetComponent<CircleCollider2D>().excludeLayers = nothingLayer;
+            }
+        }
+
+        
     }
 
     void FixedUpdate()

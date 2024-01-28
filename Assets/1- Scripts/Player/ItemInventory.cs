@@ -38,6 +38,8 @@ public class ItemInventory : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
                     Debug.Log("Ghost mode power up pressed");
+                    player.isGhost = true;
+                    player.ghostTimer = 4f;
                     status = 0;
                 }
                 break;

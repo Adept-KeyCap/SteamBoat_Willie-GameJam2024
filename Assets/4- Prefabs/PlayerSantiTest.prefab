@@ -104,10 +104,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSpeed: 10
   movCooldown: 0.02
+  walls:
+    serializedVersion: 2
+    m_Bits: 128
+  nothingLayer:
+    serializedVersion: 2
+    m_Bits: 0
   health: 0
   isInvincible: 0
   invincibleTimer: 0
   timeInvincible: 2
+  ghostTimer: 0
+  timeGhost: 4
+  isGhost: 0
 --- !u!58 &8169290555190299137
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -143,7 +152,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: -0.012927055, y: -0.64560103}
-  m_Radius: 1.6910508
+  m_Radius: 1.5
 --- !u!50 &2611101275339144705
 Rigidbody2D:
   serializedVersion: 4
