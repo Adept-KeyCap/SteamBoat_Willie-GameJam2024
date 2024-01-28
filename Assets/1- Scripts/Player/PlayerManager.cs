@@ -32,11 +32,13 @@ public class PlayerManager : MonoBehaviour
 
     [SerializeField] private ParticleSystem takeDamageVFX;
 
-    private CatCheesyManager cat;
+    [SerializeField] private GameObject cat;
+    private Animator animCat;
+
     void Start()
     {
         gameManager = FindFirstObjectByType<GameManager>();
-        cat = FindFirstObjectByType<CatCheesyManager>();
+        animCat = cat.GetComponent<Animator>();
         isMoving = false;
         health = 5;
         isInvincible = false;
@@ -122,7 +124,7 @@ public class PlayerManager : MonoBehaviour
         gameObject.GetComponent<Animator>().SetTrigger("Damaged");
         invincibleTimer = timeInvincible;
 
-        cat.HappyScream(); //  Happy Scream  
+        animCat.SetTrigger("Happy"); 
         health -= amount;
         if (health <= 0)
         {
