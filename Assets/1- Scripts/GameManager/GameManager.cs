@@ -4,7 +4,6 @@ using TMPro;
 using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
 using UnityEngine.UI;
-using DG.Tweening;
 using UnityEngine.SceneManagement;
 using UnityEngine.Video;
 
