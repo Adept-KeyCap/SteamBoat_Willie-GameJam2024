@@ -14,5 +14,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menus/Credits.unity
     guid: 4e11fa45263242b4cb69c0084d60d79c
+  - enabled: 1
+    path: Assets/Scenes/Sacred scene.unity
+    guid: da8d75b21b908cf438873d177c264b7e
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
