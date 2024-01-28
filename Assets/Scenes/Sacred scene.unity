@@ -23745,10 +23745,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Map Collider
       objectReference: {fileID: 0}
-    - target: {fileID: 5077060826238621084, guid: 9bfe1653ce1f0fc48bd4036f67b1df77, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
