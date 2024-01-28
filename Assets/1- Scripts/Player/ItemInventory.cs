@@ -32,7 +32,7 @@ public class ItemInventory : MonoBehaviour
         player = FindFirstObjectByType<PlayerManager>();
         status = 0;
         spawner = FindFirstObjectByType<ItemSpawner>();
-        audioManager = GetComponent<AudioManager>();
+        audioManager = FindFirstObjectByType<AudioManager>();
         itemHolder.SetActive(false);
         mouseySprite = GetComponent<SpriteRenderer>();
         ghostColor = new Color(0, 255, 255, 130);
@@ -54,6 +54,7 @@ public class ItemInventory : MonoBehaviour
                     Debug.Log("invincible power up pressed");
                     StartCoroutine(InvincibleVFX());
                     player.isInvincible = true;
+                    audioManager.Play_invincibility_SFX();
                     player.invincibleTimer = 4f;
                     itemHolder.GetComponent<Image>().sprite = blank;
                     status = 0;
@@ -66,6 +67,7 @@ public class ItemInventory : MonoBehaviour
                     player.isGhost = true;
                     StartCoroutine(PhantomVFX());
 
+                    audioManager.Play_phantom_SFX();
                     player.ghostTimer = 4f;
                     itemHolder.GetComponent<Image>().sprite = blank;
                     status = 0;
@@ -76,6 +78,7 @@ public class ItemInventory : MonoBehaviour
                 {
                     spawner.SpawnItems(redCheese);
                     Debug.Log("Red Cheese power up pressed");
+                    audioManager.Play_redCheese_SFX();
                     itemHolder.GetComponent<Image>().sprite = blank;
                     status = 0;
                 }

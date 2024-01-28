@@ -695,6 +695,18 @@ PrefabInstance:
       propertyPath: Priority
       value: 61
       objectReference: {fileID: 0}
+    - target: {fileID: 1918702376316428167, guid: 5fe0a63a834cfad4486c8bcaec7ab834, type: 3}
+      propertyPath: Priority
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 3063214124134019660, guid: 5fe0a63a834cfad4486c8bcaec7ab834, type: 3}
+      propertyPath: Priority
+      value: 39
+      objectReference: {fileID: 0}
+    - target: {fileID: 3063214124134019660, guid: 5fe0a63a834cfad4486c8bcaec7ab834, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6e32260de2297e34794c1b17c7b16138, type: 3}
     - target: {fileID: 5215778788183318982, guid: 5fe0a63a834cfad4486c8bcaec7ab834, type: 3}
       propertyPath: Priority
       value: 82

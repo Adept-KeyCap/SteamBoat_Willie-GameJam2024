@@ -10,11 +10,16 @@ public class PowerUp : MonoBehaviour
     private int selected = 0;
 
     private ItemInventory inventory;
+    private AudioManager audioManager;
+
+
     // Start is called before the first frame update
     void Start()
     {
        selected = Random.Range(1, 4);
        inventory = FindFirstObjectByType<ItemInventory>();
+       audioManager = FindFirstObjectByType<AudioManager>();
+
     }
 
     // Update is called once per frame
@@ -52,6 +57,8 @@ public class PowerUp : MonoBehaviour
                 Destroy(gameObject);
                 break;
             }
+
+            audioManager.Play_mysteryBox_SFX();
         }
         
     }

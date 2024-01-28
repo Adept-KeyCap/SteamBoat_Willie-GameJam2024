@@ -34,6 +34,8 @@ public class PlayerManager : MonoBehaviour
 
     [SerializeField] private GameObject cat;
     private Animator animCat;
+    private AudioManager audioManager;
+
 
     void Start()
     {
@@ -45,6 +47,9 @@ public class PlayerManager : MonoBehaviour
         isGhost = false;
 
         gameManager.UpdateHealth(health);
+        audioManager = FindFirstObjectByType<AudioManager>();
+
+
     }
 
     private void Update()
@@ -133,6 +138,7 @@ public class PlayerManager : MonoBehaviour
         }
 
         takeDamageVFX.Play();
+        audioManager.Play_mouseHurt_SFX();
         gameManager.UpdateHealth(health);
     }
 }
