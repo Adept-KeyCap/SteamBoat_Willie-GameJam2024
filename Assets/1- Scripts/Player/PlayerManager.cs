@@ -30,6 +30,8 @@ public class PlayerManager : MonoBehaviour
     public bool isGhost = false;
 
 
+    [SerializeField] private ParticleSystem takeDamageVFX;
+
     private CatCheesyManager cat;
     void Start()
     {
@@ -128,6 +130,7 @@ public class PlayerManager : MonoBehaviour
             gameManager.OnCatWin();
         }
 
+        takeDamageVFX.Play();
         gameManager.UpdateHealth(health);
     }
 }
