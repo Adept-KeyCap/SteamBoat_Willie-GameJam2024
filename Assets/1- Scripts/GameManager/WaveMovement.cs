@@ -6,7 +6,7 @@ using DG.Tweening;
 public class WaveMovement : MonoBehaviour
 {
     //[SerializeField] private Transform innerShape, outerShape;
-    [SerializeField] private float cycleLength = 2;
+    [SerializeField] private float cycleLength;
     [SerializeField] private float cycleLength2 = 1.7f;
 
     // Start is called before the first frame update
