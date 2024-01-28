@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: cffa66329b9554641bd14c4cc34a8e16
+guid: bbde2db17eec13d45aa81a49d1389e84
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -431869805396780207
-    second: quesito rojo_0
+      213: 28607937212481230
+    second: HandOnClic_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: quesito rojo_0
+      name: HandOnClic_0
       rect:
         serializedVersion: 2
-        x: 48
-        y: 58
-        width: 165
-        height: 117
+        x: 7
+        y: 12
+        width: 240
+        height: 230
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 15b9b1c33b0b10af0800000000000000
-      internalID: -431869805396780207
+      spriteID: ece7e4f64c2a56000800000000000000
+      internalID: 28607937212481230
       vertices: []
       indices: 
       edges: []
@@ -128,8 +128,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      quesito rojo_0: -431869805396780207
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

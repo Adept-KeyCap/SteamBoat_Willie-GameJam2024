@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: cffa66329b9554641bd14c4cc34a8e16
+guid: 04ee68d4be7b7f64a8e09d5fac623734
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -431869805396780207
-    second: quesito rojo_0
+      213: -1154755287077210744
+    second: grabed- 0007_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -98,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: quesito rojo_0
+      name: grabed- 0007_0
       rect:
         serializedVersion: 2
-        x: 48
-        y: 58
-        width: 165
-        height: 117
+        x: 61
+        y: 13
+        width: 877
+        height: 895
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 15b9b1c33b0b10af0800000000000000
-      internalID: -431869805396780207
+      spriteID: 885324f3f2c79ffe0800000000000000
+      internalID: -1154755287077210744
       vertices: []
       indices: 
       edges: []
@@ -129,7 +129,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      quesito rojo_0: -431869805396780207
+      grabed- 0007_0: -1154755287077210744
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
