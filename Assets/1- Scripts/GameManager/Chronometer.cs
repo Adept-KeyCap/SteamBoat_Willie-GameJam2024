@@ -85,7 +85,7 @@ public class Chronometer : MonoBehaviour
         }
     }
 
-    private void ResumeGame()
+    public void ResumeGame()
     {
         if (isPaused)
         {
