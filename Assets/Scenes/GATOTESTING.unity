@@ -681,11 +681,11 @@ PrefabInstance:
       objectReference: {fileID: 392623694}
     - target: {fileID: 8040853415991270979, guid: 7ebeb69fe643aae4d81dbf3619dd946f, type: 3}
       propertyPath: shreddedCooldown
-      value: 90
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8040853415991270979, guid: 7ebeb69fe643aae4d81dbf3619dd946f, type: 3}
       propertyPath: shreddedDuration
-      value: 15
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 8765740764150738266, guid: 7ebeb69fe643aae4d81dbf3619dd946f, type: 3}
       propertyPath: m_Name
