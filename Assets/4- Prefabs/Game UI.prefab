@@ -967,7 +967,7 @@ GameObject:
   - component: {fileID: 817249493153764850}
   - component: {fileID: 4706868096815316331}
   m_Layer: 5
-  m_Name: Drag Icon (1)
+  m_Name: Box Icon (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1020,7 +1020,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -756894638, guid: 0937de4b2387af4489a6abc0e3e10182, type: 3}
+  m_Sprite: {fileID: -1694906313, guid: 5114e9e323de7df499be74c868ffe7d7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1749,7 +1749,7 @@ GameObject:
   - component: {fileID: 6514047317878341698}
   - component: {fileID: 7475901730482704093}
   m_Layer: 5
-  m_Name: Bomb Icon (1)
+  m_Name: Super Bomb Icon (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1802,7 +1802,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 944902608, guid: 0937de4b2387af4489a6abc0e3e10182, type: 3}
+  m_Sprite: {fileID: -1451331419, guid: 5114e9e323de7df499be74c868ffe7d7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
