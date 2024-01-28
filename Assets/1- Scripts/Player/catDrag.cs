@@ -59,7 +59,6 @@ public class catDrag : MonoBehaviour
     }
 
     void OnMouseDrag(){
-        Debug.Log("Pene");
         if (isAvailable && !isShredded){
             if (estado == 1){
                 estado = 2;
