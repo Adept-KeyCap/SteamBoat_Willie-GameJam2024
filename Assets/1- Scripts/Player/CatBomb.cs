@@ -2,6 +2,7 @@ using UnityEngine;
 using Unity.Mathematics;
 using UnityEngine.UIElements;
 using Image = UnityEngine.UI.Image;
+using System.Collections;
 
 public class CatBomb : MonoBehaviour
 {
@@ -46,11 +47,13 @@ public class CatBomb : MonoBehaviour
                 if (isShredded)
                 {
                     Instantiate(bombom, worldPosition, Quaternion.identity);
+                    audioManager.Play_catSuperBomb_drop_SFX();
                 }
                 else
                 {
                     Instantiate(bomb, worldPosition, Quaternion.identity);
                     audioManager.Play_CatBomb_Drop();
+                    StartCoroutine(WaitForExplosion(1.4f));
 
                 }
             }
@@ -103,5 +106,12 @@ public class CatBomb : MonoBehaviour
         Vector3 aproximatePos = new Vector3(math.round(currentPosition.x), math.round(currentPosition.y));
 
         return aproximatePos;
+    }
+
+    private IEnumerator WaitForExplosion(float time)
+    {
+        yield return new WaitForSeconds(time);
+        audioManager.Play_bombExplotion_SFX();
+
     }
 }

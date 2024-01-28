@@ -31,6 +31,7 @@ public class BombScript : MonoBehaviour
             explosionArea.SetActive(true);
 
             StartCoroutine(WaitWhenExplode(timeWhileBombing));
+          
             //this.gameObject.SetActive(false);
             //Destroy(this.gameObject);
         }
@@ -38,9 +39,8 @@ public class BombScript : MonoBehaviour
 
     private IEnumerator WaitWhenExplode(float time)
     {
-
-        audioManager.Play_bombExplotion_SFX();
         yield return new WaitForSeconds(time);
+        //audioManager.Play_bombExplotion_SFX();
         Destroy(gameObject);
 
     }
