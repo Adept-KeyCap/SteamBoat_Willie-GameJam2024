@@ -256,6 +256,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cycleLength: -2
   cycleLength2: 1.7
+--- !u!1 &108122247 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1520087811494898094, guid: eccdfbb5170bfc043b04b89c4426c749, type: 3}
+  m_PrefabInstance: {fileID: 1383795989}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &108122249 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5426889513210740993, guid: eccdfbb5170bfc043b04b89c4426c749, type: 3}
+  m_PrefabInstance: {fileID: 1383795989}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108122247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &206355192
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,6 +356,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &226107428 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1480088708051813496, guid: eccdfbb5170bfc043b04b89c4426c749, type: 3}
+  m_PrefabInstance: {fileID: 1383795989}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &236280505
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,7 +450,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3642197370767326509, guid: eccdfbb5170bfc043b04b89c4426c749, type: 3}
   m_PrefabInstance: {fileID: 1383795989}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1279208540}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -547,6 +568,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7707795211486782356, guid: 5fe0a63a834cfad4486c8bcaec7ab834, type: 3}
+      propertyPath: cDBoxBG
+      value: 
+      objectReference: {fileID: 108122249}
+    - target: {fileID: 7707795211486782356, guid: 5fe0a63a834cfad4486c8bcaec7ab834, type: 3}
       propertyPath: cDBombBG
       value: 
       objectReference: {fileID: 316046734}
@@ -567,6 +592,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fe0a63a834cfad4486c8bcaec7ab834, type: 3}
+--- !u!1 &458261576 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7212353538770102182, guid: eccdfbb5170bfc043b04b89c4426c749, type: 3}
+  m_PrefabInstance: {fileID: 1383795989}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &463499212
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -583,6 +613,14 @@ PrefabInstance:
       propertyPath: timerText
       value: 
       objectReference: {fileID: 1383795992}
+    - target: {fileID: 1554525228449433980, guid: 7ebeb69fe643aae4d81dbf3619dd946f, type: 3}
+      propertyPath: catWinTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554525228449433980, guid: 7ebeb69fe643aae4d81dbf3619dd946f, type: 3}
+      propertyPath: playfulTime
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1982225492313166127, guid: 7ebeb69fe643aae4d81dbf3619dd946f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.3979
@@ -668,9 +706,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 691868694}
     - target: {fileID: 8040853415991270979, guid: 7ebeb69fe643aae4d81dbf3619dd946f, type: 3}
+      propertyPath: BomButton
+      value: 
+      objectReference: {fileID: 1279208540}
+    - target: {fileID: 8040853415991270979, guid: 7ebeb69fe643aae4d81dbf3619dd946f, type: 3}
+      propertyPath: BoxButton
+      value: 
+      objectReference: {fileID: 108122247}
+    - target: {fileID: 8040853415991270979, guid: 7ebeb69fe643aae4d81dbf3619dd946f, type: 3}
+      propertyPath: DragButton
+      value: 
+      objectReference: {fileID: 458261576}
+    - target: {fileID: 8040853415991270979, guid: 7ebeb69fe643aae4d81dbf3619dd946f, type: 3}
       propertyPath: transitionBox
       value: 
       objectReference: {fileID: 2109304234}
+    - target: {fileID: 8040853415991270979, guid: 7ebeb69fe643aae4d81dbf3619dd946f, type: 3}
+      propertyPath: SuperBomButton
+      value: 
+      objectReference: {fileID: 226107428}
     - target: {fileID: 8765740764150738266, guid: 7ebeb69fe643aae4d81dbf3619dd946f, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -1310,7 +1364,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3155467910076812947, guid: eccdfbb5170bfc043b04b89c4426c749, type: 3}
   m_PrefabInstance: {fileID: 1383795989}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 226107428}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -1321,7 +1375,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5253201044756745232, guid: eccdfbb5170bfc043b04b89c4426c749, type: 3}
   m_PrefabInstance: {fileID: 1383795989}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 458261576}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -1657,6 +1711,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1279208540 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3550534024682000932, guid: eccdfbb5170bfc043b04b89c4426c749, type: 3}
+  m_PrefabInstance: {fileID: 1383795989}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1311423185
 GameObject:
   m_ObjectHideFlags: 0
@@ -1831,10 +1890,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3550534024682000932, guid: eccdfbb5170bfc043b04b89c4426c749, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+    - target: {fileID: 2211183401110695081, guid: eccdfbb5170bfc043b04b89c4426c749, type: 3}
+      propertyPath: m_Name
+      value: Box Icon (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4304740897070462414, guid: eccdfbb5170bfc043b04b89c4426c749, type: 3}
+      propertyPath: m_Name
+      value: Super Bomb Icon (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4706868096815316331, guid: eccdfbb5170bfc043b04b89c4426c749, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1694906313, guid: 5114e9e323de7df499be74c868ffe7d7, type: 3}
     - target: {fileID: 6303819720811556150, guid: eccdfbb5170bfc043b04b89c4426c749, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1919,10 +1986,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game UI
       objectReference: {fileID: 0}
-    - target: {fileID: 7212353538770102182, guid: eccdfbb5170bfc043b04b89c4426c749, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 7475901730482704093, guid: eccdfbb5170bfc043b04b89c4426c749, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1451331419, guid: 5114e9e323de7df499be74c868ffe7d7, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

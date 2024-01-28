@@ -16,6 +16,7 @@ public class CatBomb : MonoBehaviour
     public bool isShredded = false;
     [SerializeField] private Image cDBombBG;
     [SerializeField] private Image cDSuperBombBG;
+    [SerializeField] private Image cDBoxBG;
 
     private AudioManager audioManager;
 
@@ -66,7 +67,7 @@ public class CatBomb : MonoBehaviour
             cDSuperBombBG.fillAmount = 1-(timer / firerate);
         }
 
-        if (boxTimer < 0 && Input.GetMouseButtonDown(0))
+        if (boxTimer <= 0 && Input.GetMouseButtonDown(0))
         {
             Vector3 mousePosition = Input.mousePosition;
             mousePosition.z = 10f; // Set this to be the distance you want the object to be placed in front of the camera
@@ -80,7 +81,10 @@ public class CatBomb : MonoBehaviour
             audioManager.Play_catBox_drop_SFX();
             boxTimer = boxFirerate;
         }
-
+        if (boxTimer > 0)
+        {
+            cDBoxBG.fillAmount = 1-(boxTimer / boxFirerate);
+        }
     }
 
     bool IsOverlappingWithObstacles(Vector2 position, LayerMask currentLayer)

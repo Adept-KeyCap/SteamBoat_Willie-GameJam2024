@@ -14,10 +14,17 @@ public class ShreddedTimer : MonoBehaviour
     [SerializeField] private GameObject cat;
     [SerializeField] private GameObject transitionBox;
     private Animator animCat;
+    
+    [SerializeField] private GameObject BomButton;
+    [SerializeField] private GameObject DragButton;
+    [SerializeField] private GameObject SuperBomButton;
+    [SerializeField] private GameObject BoxButton;
     void Start()
     {
         animCat = cat.GetComponent<Animator>();
         shreddedCooldownTimer = shreddedCooldown;
+        DragButton.SetActive(true);
+        BomButton.SetActive(true);
     }
 
     // Update is called once per frame
@@ -40,6 +47,10 @@ public class ShreddedTimer : MonoBehaviour
                 animCat.SetBool("isShredded", true);
                 shreddedDurationTimer = shreddedDuration;
                 estado = 3;
+                DragButton.SetActive(false);
+                BomButton.SetActive(false);
+                SuperBomButton.SetActive(true);
+                BoxButton.SetActive(true);
                 break;
             case 3:
                 if(shreddedDurationTimer >= 0){
@@ -55,6 +66,10 @@ public class ShreddedTimer : MonoBehaviour
                 animCat.SetBool("isShredded", false);
                 shreddedCooldownTimer = shreddedCooldown;
                 estado = 1;
+                DragButton.SetActive(true);
+                BomButton.SetActive(true);
+                SuperBomButton.SetActive(false);
+                BoxButton.SetActive(false);
                 break;
         }
     }
