@@ -40,7 +40,7 @@ public class PlayerManager : MonoBehaviour
         gameManager = FindFirstObjectByType<GameManager>();
         animCat = cat.GetComponent<Animator>();
         isMoving = false;
-        health = 5;
+        health = 7;
         isInvincible = false;
         isGhost = false;
 
