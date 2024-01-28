@@ -13,6 +13,8 @@ public class BombScript : MonoBehaviour
     //private bool isAvailable;
     private AudioManager audioManager;
     // Start is called before the first frame update
+    [SerializeField] private ParticleSystem bombArea;
+
     void Start()
     {
         explosionArea.SetActive(false);
@@ -29,7 +31,7 @@ public class BombScript : MonoBehaviour
         if (bombTimer < 0)
         {
             explosionArea.SetActive(true);
-
+            bombArea.Play();
             StartCoroutine(WaitWhenExplode(timeWhileBombing));
           
             //this.gameObject.SetActive(false);
