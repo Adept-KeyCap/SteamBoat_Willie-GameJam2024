@@ -120,6 +120,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &298213282 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3049576367499474049, guid: eccdfbb5170bfc043b04b89c4426c749, type: 3}
+  m_PrefabInstance: {fileID: 1383795989}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &400207705
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,6 +243,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 7526385298841580979, guid: 5fe0a63a834cfad4486c8bcaec7ab834, type: 3}
+      propertyPath: m_BoundingShape2D
+      value: 
+      objectReference: {fileID: 1576521400}
     - target: {fileID: 8288728721166011618, guid: 5fe0a63a834cfad4486c8bcaec7ab834, type: 3}
       propertyPath: m_Follow
       value: 
@@ -245,33 +254,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7343646651777485264, guid: 5fe0a63a834cfad4486c8bcaec7ab834, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 451819793}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fe0a63a834cfad4486c8bcaec7ab834, type: 3}
---- !u!1 &451819792 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7343646651777485264, guid: 5fe0a63a834cfad4486c8bcaec7ab834, type: 3}
-  m_PrefabInstance: {fileID: 451819791}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &451819793
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 451819792}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2fba25a5cd15594e8f050a11e386c80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ConfineMode: 0
-  m_BoundingVolume: {fileID: 0}
-  m_BoundingShape2D: {fileID: 1576521400}
-  m_ConfineScreenEdges: 1
-  m_Damping: 0
 --- !u!1001 &463499212
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -953,6 +937,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3678978856854341649, guid: ebfebaa3126540742803fc204f24b2ec, type: 3}
+      propertyPath: itemHolder
+      value: 
+      objectReference: {fileID: 298213282}
     - target: {fileID: 8442244639565894892, guid: ebfebaa3126540742803fc204f24b2ec, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.9

@@ -22,6 +22,7 @@ public class ItemInventory : MonoBehaviour
         player = FindFirstObjectByType<PlayerManager>();
         status = 0;
         spawner = FindFirstObjectByType<ItemSpawner>();
+        itemHolder.SetActive(false);
     }
 
     // Update is called once per frame
@@ -68,6 +69,8 @@ public class ItemInventory : MonoBehaviour
     }
 
     public void updateIcon(int icon){
+        itemHolder.SetActive(true);
+
         switch(icon){
             case 1:
                 itemHolder.GetComponent<Image>().sprite = invincible;

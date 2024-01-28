@@ -492,6 +492,7 @@ MonoBehaviour:
   box: {fileID: 4752222198893394603, guid: 3a3e3708ef43911418962d1bb2d5b0e2, type: 3}
   bombom: {fileID: 8355874204003268139, guid: b861aa92b87cd3f47b15b4c735ef15c5, type: 3}
   firerate: 0
+  boxFirerate: 0
   wallLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -507,6 +508,7 @@ GameObject:
   - component: {fileID: 7294012305224264315}
   - component: {fileID: 8288728721166011618}
   - component: {fileID: 8347901899311806546}
+  - component: {fileID: 7526385298841580979}
   m_Layer: 5
   m_Name: Virtual Camera
   m_TagString: Untagged
@@ -583,3 +585,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68530fc46ba205a46a749bdbb7b01f8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7526385298841580979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7343646651777485264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2fba25a5cd15594e8f050a11e386c80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ConfineMode: 0
+  m_BoundingVolume: {fileID: 0}
+  m_BoundingShape2D: {fileID: 0}
+  m_ConfineScreenEdges: 1
+  m_Damping: 0
