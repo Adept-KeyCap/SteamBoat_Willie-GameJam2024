@@ -6,14 +6,17 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private ItemSpawner itemSpawner;
 
     [SerializeField] private TextMeshProUGUI healthTxt;
-    [SerializeField] private TextMeshProUGUI scoreTxt;  
+    [SerializeField] private TextMeshProUGUI scoreTxt;
+    [SerializeField] private TextMeshProUGUI score2WinTxt;
     public int mouseyScore;
+    [SerializeField] private int scoreToWin;
 
     [SerializeField] private List<Image> mouseyWinScreens = new List<Image>();
     [SerializeField] private List<Image> catWinScreens = new List<Image>();
@@ -26,6 +29,12 @@ public class GameManager : MonoBehaviour
     public int mysteryBoxConut;
     public int mystertBoxSpawnRate;
 
+    [Header("Videos")]
+    [SerializeField] private VideoPlayer gatoWins;
+    [SerializeField] private VideoPlayer mouseyWins;
+
+    [SerializeField] private GameObject uiGameObj;
+
     void Start()
     {
         itemSpawner = GetComponent<ItemSpawner>();
@@ -37,6 +46,8 @@ public class GameManager : MonoBehaviour
         itemSpawner.SpawnItems(mysteryBoxPrefab);
         StartCoroutine(MysteryBoxRespawn());
 
+        score2WinTxt.text = "/ " + scoreToWin.ToString();
+
     }
 
     void Update()
@@ -46,36 +57,44 @@ public class GameManager : MonoBehaviour
             itemSpawner.SpawnItems(smallCheesePrefab);
             smallCheeseConut++;
         }
-
     }
 
     public void UpdateHealth(int currentHealth)
     {
-        healthTxt.text = currentHealth.ToString();
+        healthTxt.text = "x " + currentHealth.ToString();
     }
 
     public void UpdateScore()
     {
-        scoreTxt.text = mouseyScore.ToString();
+        scoreTxt.text = "x " + mouseyScore.ToString();
+
+        if(mouseyScore >= scoreToWin)
+        {
+            OnMouseyWin();
+        }
     }
 
     public void OnMouseyWin()
     {
-
-        StartCoroutine(WaitAndLoadMenu(5));
+        uiGameObj.SetActive(false);
+        StartCoroutine(WaitAndLoadMenu(mouseyWins,10));
 
     }
 
     public void OnCatWin()
     {
+        uiGameObj.SetActive(false);
 
-        StartCoroutine(WaitAndLoadMenu(5));
+        StartCoroutine(WaitAndLoadMenu(gatoWins,10));
     }
 
 
-    public IEnumerator WaitAndLoadMenu(float waitTime)
+    public IEnumerator WaitAndLoadMenu(VideoPlayer winScreen, float waitTime)
     {
-
+        if(winScreen != null)
+        {
+            winScreen.Play();
+        }
 
         yield return new WaitForSeconds(waitTime);
 

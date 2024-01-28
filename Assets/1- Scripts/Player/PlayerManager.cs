@@ -16,6 +16,7 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private LayerMask walls;
     [SerializeField] private LayerMask nothingLayer;
     private Vector3 nextPosition;
+    private GameManager gameManager;
 
     private bool isMoving;
 
@@ -30,10 +31,14 @@ public class PlayerManager : MonoBehaviour
     
     void Start()
     {
+        gameManager = FindFirstObjectByType<GameManager>();
+
         isMoving = false;
         health = 5;
         isInvincible = false;
         isGhost = false;
+
+        gameManager.UpdateHealth(health);
     }
 
     private void Update()
@@ -70,7 +75,9 @@ public class PlayerManager : MonoBehaviour
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
             CheckMovement();
-        }else{
+        }
+        else
+        {
             isMoving = false;
             gameObject.GetComponent<Animator>().SetBool("isMoving", isMoving);
         }
@@ -103,17 +110,20 @@ public class PlayerManager : MonoBehaviour
 
     public void TakeDamage(int amount)
     {
-            if (isInvincible)
-                return;
+         if (isInvincible)
+             return;
 
-            isInvincible = true;
-            invincibleTimer = timeInvincible;
+         isInvincible = true;
+         invincibleTimer = timeInvincible;
 
             
-            health -= amount;
-            if (health <= 0)
-            {
-                //MOUSEY SE PETATEO, PONGAN LA ANIMACION
-            }
+         health -= amount;
+         if (health <= 0)
+         {
+            //MOUSEY SE PETATEO, PONGAN LA ANIMACION
+            gameManager.OnCatWin();
+         }
+
+         gameManager.UpdateHealth(health);
     }
 }
