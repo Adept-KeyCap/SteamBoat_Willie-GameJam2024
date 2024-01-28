@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      idle moki- 0038_0: -6635912798261069728
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
