@@ -152,7 +152,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      barandal borde del bote_union_0: -7461854859941944052
+      barandal borde del bote_union_1: -846747045068749390
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

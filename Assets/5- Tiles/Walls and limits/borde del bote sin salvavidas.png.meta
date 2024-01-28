@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      borde del bote sin salvavidas_0: 6063130380905562947
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

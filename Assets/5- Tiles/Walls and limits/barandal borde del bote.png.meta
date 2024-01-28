@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      barandal borde del bote_0: 7760903356295232648
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

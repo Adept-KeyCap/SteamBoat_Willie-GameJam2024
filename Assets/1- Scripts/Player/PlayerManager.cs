@@ -63,7 +63,7 @@ public class PlayerManager : MonoBehaviour
         isMoving = true;
 
         Vector3 movement = new Vector3(horizontalInput, verticalInput, 0f) * playerSpeed * Time.fixedDeltaTime;
-        UnityEngine.Debug.Log(movement);
+        //UnityEngine.Debug.Log(movement);
         gameObject.GetComponent<Animator>().SetBool("isMoving", isMoving);
         gameObject.GetComponent<Animator>().SetFloat("MoveX", movement.x / (playerSpeed * movCooldown));
         gameObject.GetComponent<Animator>().SetFloat("MoveY", movement.y / (playerSpeed * movCooldown));

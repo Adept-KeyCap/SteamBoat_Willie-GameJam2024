@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      borde del bote derecho_0: 7285449013450206990
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

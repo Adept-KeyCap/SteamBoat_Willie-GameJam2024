@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      diagonal bote parte de abajo_0: 8258943912860189180
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
