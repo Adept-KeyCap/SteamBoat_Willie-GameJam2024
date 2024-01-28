@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private ItemSpawner itemSpawner;
 
     [SerializeField] private TextMeshProUGUI healthTxt;
-    [SerializeField] private TextMeshProUGUI scoreTxt;  
+    [SerializeField] private TextMeshProUGUI scoreTxt;
     public int mouseyScore;
 
     [SerializeField] private List<Image> mouseyWinScreens = new List<Image>();
@@ -46,12 +46,11 @@ public class GameManager : MonoBehaviour
             itemSpawner.SpawnItems(smallCheesePrefab);
             smallCheeseConut++;
         }
-
     }
 
     public void UpdateHealth(int currentHealth)
     {
-        healthTxt.text = currentHealth.ToString();
+        healthTxt.text = "x " + currentHealth.ToString();
     }
 
     public void UpdateScore()
