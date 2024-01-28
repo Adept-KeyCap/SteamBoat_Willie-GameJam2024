@@ -7,7 +7,7 @@ public class Credits : MonoBehaviour
 {
     private void Start()
     {
-        //StartCoroutine(LoadpreviosScene());
+        StartCoroutine(LoadpreviosScene());
     }
 
     void FixedUpdate()
