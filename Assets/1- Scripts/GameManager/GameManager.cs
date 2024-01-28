@@ -36,8 +36,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private Texture2D cursorClic;
 
-    [SerializeField] private GameObject cat;
-    private Animator animCat;
+
     void Start()
     {
         itemSpawner = GetComponent<ItemSpawner>();
