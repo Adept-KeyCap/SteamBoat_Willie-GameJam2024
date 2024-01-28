@@ -19,12 +19,17 @@ public class ShreddedTimer : MonoBehaviour
     [SerializeField] private GameObject DragButton;
     [SerializeField] private GameObject SuperBomButton;
     [SerializeField] private GameObject BoxButton;
+
+    private AudioManager audioManager;
+
     void Start()
     {
         animCat = cat.GetComponent<Animator>();
         shreddedCooldownTimer = shreddedCooldown;
         DragButton.SetActive(true);
         BomButton.SetActive(true);
+        audioManager = FindFirstObjectByType<AudioManager>();
+
     }
 
     // Update is called once per frame
@@ -51,6 +56,8 @@ public class ShreddedTimer : MonoBehaviour
                 BomButton.SetActive(false);
                 SuperBomButton.SetActive(true);
                 BoxButton.SetActive(true);
+
+                audioManager.Play_catAndSrynge_SFX();
                 break;
             case 3:
                 if(shreddedDurationTimer >= 0){
@@ -80,5 +87,6 @@ public class ShreddedTimer : MonoBehaviour
         yield return new WaitForSeconds(7/5);
 
         transitionBox.GetComponent<Animator>().SetTrigger("Transition");
+        audioManager.Play_poof_SFX();
     }
 }

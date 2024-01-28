@@ -20,12 +20,17 @@ public class Chronometer : MonoBehaviour
 
     [SerializeField] private float playfulTime;
     [SerializeField] private float catWinTime;
+
+    private AudioManager audioManager;
+
     //private CatCheesyManager cat;
     void Start()
     {
         animCat = cat.GetComponent<Animator>();
         StartChronometer();
         gameManager = gameObject.GetComponent<GameManager>();
+        audioManager = FindFirstObjectByType<AudioManager>();
+
     }
 
     void Update()
@@ -53,6 +58,7 @@ public class Chronometer : MonoBehaviour
 
         if(minutes >= playfulTime){
             animCat.SetBool("IsPlayful", true);
+            audioManager.Play_catEvilLaugh_SFX();
         }
 
         if(minutes >= catWinTime){

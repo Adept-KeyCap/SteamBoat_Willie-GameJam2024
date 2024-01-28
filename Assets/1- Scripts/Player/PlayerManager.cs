@@ -139,6 +139,7 @@ public class PlayerManager : MonoBehaviour
 
         takeDamageVFX.Play();
         audioManager.Play_mouseHurt_SFX();
+        audioManager.Play_catPlayful_SFX();
         gameManager.UpdateHealth(health);
     }
 }

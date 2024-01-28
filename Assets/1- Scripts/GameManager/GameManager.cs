@@ -41,6 +41,9 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameObject limitMap;
 
+    private AudioManager audioManager;
+
+
     void Start()
     {
         itemSpawner = GetComponent<ItemSpawner>();
@@ -55,7 +58,8 @@ public class GameManager : MonoBehaviour
         score2WinTxt.text = "/ " + scoreToWin.ToString();
         
         limitMap.SetActive(true);
-        
+
+        audioManager = FindFirstObjectByType<AudioManager>();
 
     }
 
@@ -88,6 +92,11 @@ public class GameManager : MonoBehaviour
         if(mouseyScore >= scoreToWin)
         {
             OnMouseyWin();
+        }
+
+        if(mouseyScore%5 == 0)
+        {
+            audioManager.Play_catAngry_SFX();
         }
     }
 
