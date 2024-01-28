@@ -38,7 +38,9 @@ public class GameManager : MonoBehaviour
 
 
 
+
     [SerializeField] private ParticleSystem cheesePickUp;
+
     private CatCheesyManager cat;
 
     void Start()
