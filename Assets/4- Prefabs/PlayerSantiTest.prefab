@@ -233,3 +233,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   status: 0
   redCheese: {fileID: 1560425141127394375, guid: 9f2cf23c834f437459633af1c8855ea8, type: 3}
+  itemHolder: {fileID: 0}
+  invincible: {fileID: 4700296590628737866, guid: 53b06bffbfebc554d83b13419e8f9402, type: 3}
+  redCheeze: {fileID: -431869805396780207, guid: cffa66329b9554641bd14c4cc34a8e16, type: 3}
+  phantom: {fileID: 5327130659187713666, guid: 4ef96f37e55ca5e478fc2a91878fb2fc, type: 3}
+  blank: {fileID: -2720922381176439266, guid: e2f8841ede75e0c44ac44ed8c2a163e9, type: 3}

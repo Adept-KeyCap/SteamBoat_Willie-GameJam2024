@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      invencible_0: 4700296590628737866
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

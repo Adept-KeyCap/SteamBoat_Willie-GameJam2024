@@ -618,6 +618,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1383795993 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7867557203374157437, guid: eccdfbb5170bfc043b04b89c4426c749, type: 3}
+  m_PrefabInstance: {fileID: 1383795989}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1547753664
 GameObject:
   m_ObjectHideFlags: 0
@@ -11609,26 +11614,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2111121871405917634, guid: ebfebaa3126540742803fc204f24b2ec, type: 3}
-      propertyPath: dragCooldown
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 3663376046189777178, guid: ebfebaa3126540742803fc204f24b2ec, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 8169290555190299137, guid: ebfebaa3126540742803fc204f24b2ec, type: 3}
-      propertyPath: m_Radius
-      value: 1.6910508
-      objectReference: {fileID: 0}
-    - target: {fileID: 8169290555190299137, guid: ebfebaa3126540742803fc204f24b2ec, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.012927055
-      objectReference: {fileID: 0}
-    - target: {fileID: 8169290555190299137, guid: ebfebaa3126540742803fc204f24b2ec, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.64560103
-      objectReference: {fileID: 0}
+    - target: {fileID: 3678978856854341649, guid: ebfebaa3126540742803fc204f24b2ec, type: 3}
+      propertyPath: itemHolder
+      value: 
+      objectReference: {fileID: 1383795993}
     - target: {fileID: 8442244639565894892, guid: ebfebaa3126540742803fc204f24b2ec, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.9
