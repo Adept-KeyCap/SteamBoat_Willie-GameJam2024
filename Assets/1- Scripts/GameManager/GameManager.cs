@@ -43,6 +43,8 @@ public class GameManager : MonoBehaviour
 
     private AudioManager audioManager;
 
+    [SerializeField] private GameObject musicBG;
+    [SerializeField] private GameObject musicWINBG;
 
     void Start()
     {
@@ -120,6 +122,8 @@ public class GameManager : MonoBehaviour
         if(winScreen != null)
         {
             winScreen.Play();
+            musicBG.SetActive(false);
+            musicWINBG.SetActive(true);
         }
 
         yield return new WaitForSeconds(waitTime);
