@@ -186,7 +186,7 @@ MonoBehaviour:
   scoreTxt: {fileID: 0}
   score2WinTxt: {fileID: 0}
   mouseyScore: 0
-  scoreToWin: 25
+  scoreToWin: 20
   mouseyWinScreens: []
   catWinScreens: []
   bigCheesePrefab: {fileID: 1560425141127394375, guid: 9f2cf23c834f437459633af1c8855ea8, type: 3}
@@ -198,6 +198,7 @@ MonoBehaviour:
   gatoWins: {fileID: 0}
   mouseyWins: {fileID: 0}
   uiGameObj: {fileID: 0}
+  cursorClic: {fileID: 0}
 --- !u!114 &8040853415991270979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,5 +213,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mousey: {fileID: 0}
   catCam: {fileID: 0}
-  shreddedCooldown: 70
+  shreddedCooldown: 45
   shreddedDuration: 15

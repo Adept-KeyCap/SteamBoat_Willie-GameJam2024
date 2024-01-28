@@ -505,8 +505,8 @@ MonoBehaviour:
   bomb: {fileID: 8355874204003268139, guid: 05fa2c9fdb47200408d0ffcc0039ef8c, type: 3}
   box: {fileID: 4752222198893394603, guid: 3a3e3708ef43911418962d1bb2d5b0e2, type: 3}
   bombom: {fileID: 8355874204003268139, guid: b861aa92b87cd3f47b15b4c735ef15c5, type: 3}
-  firerate: 0
-  boxFirerate: 0
+  firerate: 0.8
+  boxFirerate: 4.9
   wallLayer:
     serializedVersion: 2
     m_Bits: 128

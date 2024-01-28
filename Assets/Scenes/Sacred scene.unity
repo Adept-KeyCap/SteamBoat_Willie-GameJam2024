@@ -523,22 +523,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Camera
       objectReference: {fileID: 0}
-    - target: {fileID: 7294012305224264315, guid: 5fe0a63a834cfad4486c8bcaec7ab834, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7294012305224264315, guid: 5fe0a63a834cfad4486c8bcaec7ab834, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7707795211486782356, guid: 5fe0a63a834cfad4486c8bcaec7ab834, type: 3}
-      propertyPath: firerate
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7707795211486782356, guid: 5fe0a63a834cfad4486c8bcaec7ab834, type: 3}
-      propertyPath: boxFirerate
-      value: 4.9
-      objectReference: {fileID: 0}
     - target: {fileID: 8288728721166011618, guid: 5fe0a63a834cfad4486c8bcaec7ab834, type: 3}
       propertyPath: m_Follow
       value: 
@@ -621,10 +605,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1269157255}
     - target: {fileID: 5978164837915827228, guid: 7ebeb69fe643aae4d81dbf3619dd946f, type: 3}
-      propertyPath: scoreToWin
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 5978164837915827228, guid: 7ebeb69fe643aae4d81dbf3619dd946f, type: 3}
       propertyPath: score2WinTxt
       value: 
       objectReference: {fileID: 1349267353}
@@ -636,10 +616,6 @@ PrefabInstance:
       propertyPath: mousey
       value: 
       objectReference: {fileID: 691868694}
-    - target: {fileID: 8040853415991270979, guid: 7ebeb69fe643aae4d81dbf3619dd946f, type: 3}
-      propertyPath: shreddedCooldown
-      value: 45
-      objectReference: {fileID: 0}
     - target: {fileID: 8765740764150738266, guid: 7ebeb69fe643aae4d81dbf3619dd946f, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -23343,25 +23319,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2111121871405917634, guid: ebfebaa3126540742803fc204f24b2ec, type: 3}
-      propertyPath: dragCooldown
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 3663376046189777178, guid: ebfebaa3126540742803fc204f24b2ec, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8169290555190299137, guid: ebfebaa3126540742803fc204f24b2ec, type: 3}
-      propertyPath: m_Radius
-      value: 1.6910508
-      objectReference: {fileID: 0}
-    - target: {fileID: 8169290555190299137, guid: ebfebaa3126540742803fc204f24b2ec, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.012927055
-      objectReference: {fileID: 0}
-    - target: {fileID: 8169290555190299137, guid: ebfebaa3126540742803fc204f24b2ec, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.64560103
       objectReference: {fileID: 0}
     - target: {fileID: 8442244639565894892, guid: ebfebaa3126540742803fc204f24b2ec, type: 3}
       propertyPath: m_LocalPosition.x
