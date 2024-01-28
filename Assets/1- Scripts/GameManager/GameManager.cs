@@ -36,6 +36,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private Texture2D cursorClic;
 
+    [SerializeField] private ParticleSystem cheesePickUp;
+
     private CatCheesyManager cat;
     void Start()
     {
@@ -78,6 +80,7 @@ public class GameManager : MonoBehaviour
 
     public void UpdateScore()
     {
+        cheesePickUp.Play();
         scoreTxt.text = "x " + mouseyScore.ToString();
         cat.Angry();
         if(mouseyScore >= scoreToWin)
