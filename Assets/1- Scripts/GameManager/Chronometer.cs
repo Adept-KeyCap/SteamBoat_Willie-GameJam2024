@@ -14,10 +14,13 @@ public class Chronometer : MonoBehaviour
     private int minutes;
     private int seconds;
 
-    private CatCheesyManager cat;
+    [SerializeField] private GameObject cat;
+    private Animator animCat;
+
+    //private CatCheesyManager cat;
     void Start()
     {
-        cat = FindFirstObjectByType<CatCheesyManager>();
+        animCat = cat.GetComponent<Animator>();
         StartChronometer();
         
     }
@@ -38,16 +41,16 @@ public class Chronometer : MonoBehaviour
                 ResumeGame();
         }
 
-        if (seconds >= 50)
-        {
-            cat.Playful();
-        }
     }
 
     private void DisplayTime(float timePassed)
     {
         minutes = Mathf.FloorToInt(timePassed / 60);
         seconds = Mathf.FloorToInt(timePassed % 60);
+
+        if(minutes >= 4){
+            animCat.SetBool("isPlayful", true);
+        }
 
         string timeText = minutes.ToString("00") + ":" + seconds.ToString("00");
         timerText.text = timeText;
