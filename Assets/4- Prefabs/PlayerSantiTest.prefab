@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2111121871405917634}
   - component: {fileID: 898758392935804886}
   - component: {fileID: 3678978856854341649}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PlayerSantiTest
   m_TagString: Mousey
   m_Icon: {fileID: 0}
