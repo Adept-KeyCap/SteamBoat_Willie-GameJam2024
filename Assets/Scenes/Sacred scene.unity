@@ -180,6 +180,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7707795211486782356, guid: 5fe0a63a834cfad4486c8bcaec7ab834, type: 3}
+      propertyPath: firerate
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7707795211486782356, guid: 5fe0a63a834cfad4486c8bcaec7ab834, type: 3}
+      propertyPath: boxFirerate
+      value: 4.9
+      objectReference: {fileID: 0}
     - target: {fileID: 8288728721166011618, guid: 5fe0a63a834cfad4486c8bcaec7ab834, type: 3}
       propertyPath: m_Follow
       value: 
@@ -242,6 +250,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5978164837915827228, guid: 7ebeb69fe643aae4d81dbf3619dd946f, type: 3}
+      propertyPath: gatoWins
+      value: 
+      objectReference: {fileID: 1976664287}
+    - target: {fileID: 5978164837915827228, guid: 7ebeb69fe643aae4d81dbf3619dd946f, type: 3}
       propertyPath: scoreTxt
       value: 
       objectReference: {fileID: 1383795990}
@@ -249,6 +261,22 @@ PrefabInstance:
       propertyPath: healthTxt
       value: 
       objectReference: {fileID: 1383795991}
+    - target: {fileID: 5978164837915827228, guid: 7ebeb69fe643aae4d81dbf3619dd946f, type: 3}
+      propertyPath: uiGameObj
+      value: 
+      objectReference: {fileID: 1074928177}
+    - target: {fileID: 5978164837915827228, guid: 7ebeb69fe643aae4d81dbf3619dd946f, type: 3}
+      propertyPath: mouseyWins
+      value: 
+      objectReference: {fileID: 1269157255}
+    - target: {fileID: 5978164837915827228, guid: 7ebeb69fe643aae4d81dbf3619dd946f, type: 3}
+      propertyPath: scoreToWin
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5978164837915827228, guid: 7ebeb69fe643aae4d81dbf3619dd946f, type: 3}
+      propertyPath: score2WinTxt
+      value: 
+      objectReference: {fileID: 1349267353}
     - target: {fileID: 8040853415991270979, guid: 7ebeb69fe643aae4d81dbf3619dd946f, type: 3}
       propertyPath: catCam
       value: 
@@ -257,6 +285,10 @@ PrefabInstance:
       propertyPath: mousey
       value: 
       objectReference: {fileID: 691868694}
+    - target: {fileID: 8040853415991270979, guid: 7ebeb69fe643aae4d81dbf3619dd946f, type: 3}
+      propertyPath: shreddedCooldown
+      value: 45
+      objectReference: {fileID: 0}
     - target: {fileID: 8765740764150738266, guid: 7ebeb69fe643aae4d81dbf3619dd946f, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -423,6 +455,88 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1074928177 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6763007220756270126, guid: eccdfbb5170bfc043b04b89c4426c749, type: 3}
+  m_PrefabInstance: {fileID: 1383795989}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1269157254
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1269157256}
+  - component: {fileID: 1269157255}
+  m_Layer: 0
+  m_Name: Mousey Victory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!328 &1269157255
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269157254}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: 3150dee3e49bfcc4da23bba04c63724d, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 1568906701}
+  m_TargetTexture: {fileID: 0}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 1
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_TimeUpdateMode: 2
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources: []
+  m_DirectAudioVolumes: []
+  m_Url: 
+  m_EnabledAudioTracks: 
+  m_DirectAudioMutes: 
+  m_ControlledAudioTrackCount: 0
+  m_PlayOnAwake: 0
+  m_SkipOnDrop: 1
+  m_Looping: 1
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
+--- !u!4 &1269157256
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269157254}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 197.70793, y: 70.27551, z: 0.07570267}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1349267353 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3924857253734267664, guid: eccdfbb5170bfc043b04b89c4426c749, type: 3}
+  m_PrefabInstance: {fileID: 1383795989}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1383795989
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -558,6 +672,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6565664732241050288, guid: 5fe0a63a834cfad4486c8bcaec7ab834, type: 3}
   m_PrefabInstance: {fileID: 451819791}
   m_PrefabAsset: {fileID: 0}
+--- !u!20 &1568906701 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 6359874215026143845, guid: 5fe0a63a834cfad4486c8bcaec7ab834, type: 3}
+  m_PrefabInstance: {fileID: 451819791}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1576521397
 GameObject:
   m_ObjectHideFlags: 0
@@ -584,6 +703,72 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.5666704, y: 0.56384915, z: -1.565654}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1976664286
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1976664288}
+  - component: {fileID: 1976664287}
+  m_Layer: 0
+  m_Name: Gato Victory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!328 &1976664287
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976664286}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: 718f1aa154906364a8323cfbb562d36e, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 1568906701}
+  m_TargetTexture: {fileID: 0}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 1
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_TimeUpdateMode: 2
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources: []
+  m_DirectAudioVolumes: []
+  m_Url: 
+  m_EnabledAudioTracks: 
+  m_DirectAudioMutes: 
+  m_ControlledAudioTrackCount: 0
+  m_PlayOnAwake: 0
+  m_SkipOnDrop: 1
+  m_Looping: 1
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
+--- !u!4 &1976664288
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976664286}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 197.70793, y: 70.27551, z: 0.07570267}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21960,3 +22145,5 @@ SceneRoots:
   - {fileID: 1576521398}
   - {fileID: 1383795989}
   - {fileID: 2045261865}
+  - {fileID: 1269157256}
+  - {fileID: 1976664288}
