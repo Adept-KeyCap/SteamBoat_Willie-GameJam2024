@@ -274,13 +274,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba8837e22f7a7c24f84ee16bab6ef26f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bomb: {fileID: 0}
-  box: {fileID: 0}
-  bombom: {fileID: 0}
+  bomb: {fileID: 8355874204003268139, guid: 05fa2c9fdb47200408d0ffcc0039ef8c, type: 3}
+  box: {fileID: 4752222198893394603, guid: 3a3e3708ef43911418962d1bb2d5b0e2, type: 3}
+  bombom: {fileID: 8355874204003268139, guid: b861aa92b87cd3f47b15b4c735ef15c5, type: 3}
   firerate: 0
   wallLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   isShredded: 0
 --- !u!1 &7343646651777485264
 GameObject:
