@@ -6,6 +6,7 @@ using Random = UnityEngine.Random;
 
 public class PowerUp : MonoBehaviour
 {
+
     private int selected = 0;
 
     private ItemInventory inventory;
@@ -30,16 +31,19 @@ public class PowerUp : MonoBehaviour
             {
             case 1:
                 inventory.status = 1;
+                inventory.updateIcon(1);
                 Debug.Log("Power 1");
                 Destroy(gameObject);
                 break;
             case 2:
                 inventory.status = 2;
+                inventory.updateIcon(2);
                 Debug.Log("Power 2");
                 Destroy(gameObject);
                 break;
             case 3:
                 inventory.status = 3;
+                inventory.updateIcon(3);
                 Debug.Log("Power 3");
                 Destroy(gameObject);
                 break;

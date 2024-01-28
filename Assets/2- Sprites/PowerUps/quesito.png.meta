@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3e42ad6ca17cd4047a92fa141b5219ca
+guid: 6c29918abca666c49864524f58068312
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6357456641816532930
-    second: Explosion_0012_0
+      213: -3755061166405985037
+    second: quesito_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Explosion_0012_0
+      name: quesito_0
       rect:
         serializedVersion: 2
-        x: 222
-        y: 182
-        width: 91
-        height: 64
+        x: 65
+        y: 49
+        width: 118
+        height: 145
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2c71c6ae1293a3850800000000000000
-      internalID: 6357456641816532930
+      spriteID: 3fcd18aa3c753ebc0800000000000000
+      internalID: -3755061166405985037
       vertices: []
       indices: 
       edges: []
@@ -128,8 +128,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Explosion_0012_0: 6357456641816532930
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3e42ad6ca17cd4047a92fa141b5219ca
+guid: 4ef96f37e55ca5e478fc2a91878fb2fc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6357456641816532930
-    second: Explosion_0012_0
+      213: 5327130659187713666
+    second: Phantom_powerup_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Explosion_0012_0
+      name: Phantom_powerup_0
       rect:
         serializedVersion: 2
-        x: 222
-        y: 182
-        width: 91
-        height: 64
+        x: 3
+        y: 3
+        width: 250
+        height: 250
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2c71c6ae1293a3850800000000000000
-      internalID: 6357456641816532930
+      spriteID: 286e9f43c15cde940800000000000000
+      internalID: 5327130659187713666
       vertices: []
       indices: 
       edges: []
@@ -128,8 +128,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Explosion_0012_0: 6357456641816532930
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
