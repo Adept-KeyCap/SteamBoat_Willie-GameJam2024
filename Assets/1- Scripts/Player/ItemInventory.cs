@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class ItemInventory : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class ItemInventory : MonoBehaviour
     private PlayerManager player;
     private ItemSpawner spawner;
 
+    [SerializeField] private SpriteRenderer mouseySprite;
+    private Color ghostColor;
+
     [SerializeField] private GameObject itemHolder;
     [SerializeField] private Sprite invincible; 
     [SerializeField] private Sprite redCheeze; 
@@ -19,13 +23,17 @@ public class ItemInventory : MonoBehaviour
     // Start is
     // called before the first frame update
     [SerializeField] private ParticleSystem cantTouchMe;
+    private AudioManager audioManager;
 
     void Start()
     {
         player = FindFirstObjectByType<PlayerManager>();
         status = 0;
         spawner = FindFirstObjectByType<ItemSpawner>();
+        audioManager = GetComponent<AudioManager>();
         itemHolder.SetActive(false);
+        mouseySprite = GetComponent<SpriteRenderer>();
+        ghostColor = new Color(0, 255, 255, 130);
     }
 
     // Update is called once per frame
@@ -41,7 +49,6 @@ public class ItemInventory : MonoBehaviour
                     Debug.Log("invincible power up pressed");
                     player.isInvincible = true;
                     player.invincibleTimer = 4f;
-                    StartCoroutine(InvincibleVFX());
                     itemHolder.GetComponent<Image>().sprite = blank;
                     status = 0;
                 }
@@ -51,6 +58,8 @@ public class ItemInventory : MonoBehaviour
                 {
                     Debug.Log("Ghost mode power up pressed");
                     player.isGhost = true;
+                    StartCoroutine(InvincibleVFX());
+
                     player.ghostTimer = 4f;
                     itemHolder.GetComponent<Image>().sprite = blank;
                     status = 0;
@@ -94,7 +103,12 @@ public class ItemInventory : MonoBehaviour
     IEnumerator InvincibleVFX()
     {
         cantTouchMe.Play();
+        audioManager.Play_phantom_SFX();
+        mouseySprite.color = ghostColor;
         yield return new WaitForSeconds(4);
+        mouseySprite.color = Color.white;
+
         cantTouchMe.Stop();
     }
+
 }

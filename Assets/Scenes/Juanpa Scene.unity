@@ -590,6 +590,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6359874215026143845, guid: 5fe0a63a834cfad4486c8bcaec7ab834, type: 3}
+      propertyPath: orthographic size
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 6565664732241050288, guid: 5fe0a63a834cfad4486c8bcaec7ab834, type: 3}
       propertyPath: m_Name
       value: Game Camera
@@ -598,6 +602,10 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 5665416765117235839}
+    - target: {fileID: 8288728721166011618, guid: 5fe0a63a834cfad4486c8bcaec7ab834, type: 3}
+      propertyPath: m_Lens.OrthographicSize
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2217,6 +2225,22 @@ PrefabInstance:
       propertyPath: itemHolder
       value: 
       objectReference: {fileID: 298213282}
+    - target: {fileID: 6160605172468309943, guid: ebfebaa3126540742803fc204f24b2ec, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6160605172468309943, guid: ebfebaa3126540742803fc204f24b2ec, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6160605172468309943, guid: ebfebaa3126540742803fc204f24b2ec, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6160605172468309943, guid: ebfebaa3126540742803fc204f24b2ec, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8442244639565894892, guid: ebfebaa3126540742803fc204f24b2ec, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.9
