@@ -1,5 +1,7 @@
 using UnityEngine;
 using Unity.Mathematics;
+using UnityEngine.UIElements;
+using Image = UnityEngine.UI.Image;
 
 public class CatBomb : MonoBehaviour
 {
@@ -12,6 +14,7 @@ public class CatBomb : MonoBehaviour
     private float boxTimer;
     public LayerMask wallLayer;
     public bool isShredded = false;
+    [SerializeField] private Image cDBombBG;
 
     private AudioManager audioManager;
 
@@ -27,7 +30,7 @@ public class CatBomb : MonoBehaviour
         timer -= Time.deltaTime;
         boxTimer -= Time.deltaTime;
 
-        if (timer < 0 && Input.GetMouseButtonDown(1))
+        if (timer <= 0 && Input.GetMouseButtonDown(1))
         {
             Vector3 mousePosition = Input.mousePosition;
             mousePosition.z = 10f; // Set this to be the distance you want the object to be placed in front of the camera
@@ -49,8 +52,14 @@ public class CatBomb : MonoBehaviour
 
                 }
             }
-
+            
             timer = firerate;
+        }
+
+        if (timer > 0)
+        {
+            
+            cDBombBG.fillAmount = 1-(timer / firerate);
         }
 
         if (boxTimer < 0 && Input.GetMouseButtonDown(0))
