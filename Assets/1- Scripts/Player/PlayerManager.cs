@@ -110,20 +110,22 @@ public class PlayerManager : MonoBehaviour
 
     public void TakeDamage(int amount)
     {
-         if (isInvincible)
-             return;
+        if (isInvincible)
+            return;
 
-         isInvincible = true;
-         invincibleTimer = timeInvincible;
+
+        isInvincible = true;
+        gameObject.GetComponent<Animator>().SetTrigger("Damaged");
+        invincibleTimer = timeInvincible;
 
             
-         health -= amount;
-         if (health <= 0)
-         {
+        health -= amount;
+        if (health <= 0)
+        {
             //MOUSEY SE PETATEO, PONGAN LA ANIMACION
             gameManager.OnCatWin();
-         }
+        }
 
-         gameManager.UpdateHealth(health);
+        gameManager.UpdateHealth(health);
     }
 }

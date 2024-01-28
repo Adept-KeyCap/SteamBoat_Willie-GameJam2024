@@ -33,6 +33,7 @@ public class catDrag : MonoBehaviour
                 break;
             case 2:
                 dragDurationTimer = dragDuration;
+                gameObject.GetComponent<Animator>().SetBool("isGrabbed", true);
                 estado = 3;
                 break;
             case 3:
@@ -42,6 +43,7 @@ public class catDrag : MonoBehaviour
                 }else{
                     isAvailable = false;
                     dragCooldownTimer = dragCooldown;
+                    gameObject.GetComponent<Animator>().SetBool("isGrabbed", false);
                     estado = 4;
                 }
                 break;
