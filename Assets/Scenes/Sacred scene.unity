@@ -424,6 +424,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &316046734 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3642197370767326509, guid: eccdfbb5170bfc043b04b89c4426c749, type: 3}
+  m_PrefabInstance: {fileID: 1383795989}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &378195643
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,6 +546,18 @@ PrefabInstance:
       propertyPath: m_ConfineScreenEdges
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7707795211486782356, guid: 5fe0a63a834cfad4486c8bcaec7ab834, type: 3}
+      propertyPath: cDBombBG
+      value: 
+      objectReference: {fileID: 316046734}
+    - target: {fileID: 7707795211486782356, guid: 5fe0a63a834cfad4486c8bcaec7ab834, type: 3}
+      propertyPath: cDBackground
+      value: 
+      objectReference: {fileID: 316046734}
+    - target: {fileID: 7707795211486782356, guid: 5fe0a63a834cfad4486c8bcaec7ab834, type: 3}
+      propertyPath: cDSuperBombBG
+      value: 
+      objectReference: {fileID: 1383795993}
     - target: {fileID: 8288728721166011618, guid: 5fe0a63a834cfad4486c8bcaec7ab834, type: 3}
       propertyPath: m_Follow
       value: 
@@ -1262,6 +1285,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6763007220756270126, guid: eccdfbb5170bfc043b04b89c4426c749, type: 3}
   m_PrefabInstance: {fileID: 1383795989}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1218438240 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5253201044756745232, guid: eccdfbb5170bfc043b04b89c4426c749, type: 3}
+  m_PrefabInstance: {fileID: 1383795989}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1251277731
 GameObject:
   m_ObjectHideFlags: 0
@@ -1280,7 +1314,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1251277733
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1766,6 +1800,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3550534024682000932, guid: eccdfbb5170bfc043b04b89c4426c749, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6303819720811556150, guid: eccdfbb5170bfc043b04b89c4426c749, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1850,6 +1888,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game UI
       objectReference: {fileID: 0}
+    - target: {fileID: 7212353538770102182, guid: eccdfbb5170bfc043b04b89c4426c749, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1886,6 +1928,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1383795993 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3155467910076812947, guid: eccdfbb5170bfc043b04b89c4426c749, type: 3}
+  m_PrefabInstance: {fileID: 1383795989}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1430970921
@@ -23501,6 +23554,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2111121871405917634, guid: ebfebaa3126540742803fc204f24b2ec, type: 3}
+      propertyPath: cDDragBG
+      value: 
+      objectReference: {fileID: 1218438240}
     - target: {fileID: 3663376046189777178, guid: ebfebaa3126540742803fc204f24b2ec, type: 3}
       propertyPath: m_Name
       value: Player

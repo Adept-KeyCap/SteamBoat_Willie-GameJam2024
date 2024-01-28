@@ -15,6 +15,7 @@ public class CatBomb : MonoBehaviour
     public LayerMask wallLayer;
     public bool isShredded = false;
     [SerializeField] private Image cDBombBG;
+    [SerializeField] private Image cDSuperBombBG;
 
     private AudioManager audioManager;
 
@@ -56,10 +57,13 @@ public class CatBomb : MonoBehaviour
             timer = firerate;
         }
 
-        if (timer > 0)
+        if (timer > 0 && !isShredded)
         {
-            
             cDBombBG.fillAmount = 1-(timer / firerate);
+        }
+        else if (timer > 0 && isShredded)
+        {
+            cDSuperBombBG.fillAmount = 1-(timer / firerate);
         }
 
         if (boxTimer < 0 && Input.GetMouseButtonDown(0))
