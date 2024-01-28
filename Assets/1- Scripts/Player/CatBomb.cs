@@ -13,10 +13,14 @@ public class CatBomb : MonoBehaviour
     public LayerMask wallLayer;
     public bool isShredded = false;
 
+    private AudioManager audioManager;
+
     private void Start()
     {
         timer = firerate;
         boxTimer = boxFirerate;
+
+        audioManager = FindFirstObjectByType<AudioManager>();
     }
     void Update()
     {
@@ -28,6 +32,9 @@ public class CatBomb : MonoBehaviour
             Vector3 mousePosition = Input.mousePosition;
             mousePosition.z = 10f; // Set this to be the distance you want the object to be placed in front of the camera
             Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
+
+            audioManager.Play_click_SFX();
+
             //Debug.Log(IsOverlappingWithObstacles(worldPosition, wallLayer));
             if (!IsOverlappingWithObstacles(worldPosition, wallLayer)) // Right click
             {               
@@ -38,6 +45,8 @@ public class CatBomb : MonoBehaviour
                 else
                 {
                     Instantiate(bomb, worldPosition, Quaternion.identity);
+                    audioManager.Play_CatBomb_Drop();
+
                 }
             }
 
@@ -49,12 +58,13 @@ public class CatBomb : MonoBehaviour
             Vector3 mousePosition = Input.mousePosition;
             mousePosition.z = 10f; // Set this to be the distance you want the object to be placed in front of the camera
             Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
+            audioManager.Play_click_SFX();
 
             if (!IsOverlappingWithObstacles(worldPosition, wallLayer) && isShredded) // Right click
             {
                 Instantiate(box, worldPosition, Quaternion.identity);
             }
-
+            audioManager.Play_catBox_drop_SFX();
             boxTimer = boxFirerate;
         }
 
