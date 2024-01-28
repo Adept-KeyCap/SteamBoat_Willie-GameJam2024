@@ -23,6 +23,8 @@ public class ItemInventory : MonoBehaviour
     // Start is
     // called before the first frame update
     [SerializeField] private ParticleSystem cantTouchMe;
+    [SerializeField] private GameObject fireVFXobj;
+    [SerializeField] private ParticleSystem maxDefense;
     private AudioManager audioManager;
 
     void Start()
@@ -34,6 +36,9 @@ public class ItemInventory : MonoBehaviour
         itemHolder.SetActive(false);
         mouseySprite = GetComponent<SpriteRenderer>();
         ghostColor = new Color(0, 255, 255, 130);
+
+        cantTouchMe.gameObject.SetActive(false);
+
     }
 
     // Update is called once per frame
@@ -47,6 +52,7 @@ public class ItemInventory : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
                     Debug.Log("invincible power up pressed");
+                    StartCoroutine(InvincibleVFX());
                     player.isInvincible = true;
                     player.invincibleTimer = 4f;
                     itemHolder.GetComponent<Image>().sprite = blank;
@@ -58,7 +64,7 @@ public class ItemInventory : MonoBehaviour
                 {
                     Debug.Log("Ghost mode power up pressed");
                     player.isGhost = true;
-                    StartCoroutine(InvincibleVFX());
+                    StartCoroutine(PhantomVFX());
 
                     player.ghostTimer = 4f;
                     itemHolder.GetComponent<Image>().sprite = blank;
@@ -100,15 +106,28 @@ public class ItemInventory : MonoBehaviour
         }
     }
 
-    IEnumerator InvincibleVFX()
+    IEnumerator PhantomVFX()
     {
+        fireVFXobj.SetActive(true);
         cantTouchMe.Play();
         audioManager.Play_phantom_SFX();
         mouseySprite.color = ghostColor;
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(2);
         mouseySprite.color = Color.white;
 
         cantTouchMe.Stop();
+        fireVFXobj.SetActive(false);
+
+    }
+
+    IEnumerator InvincibleVFX()
+    {
+        maxDefense.Play();
+
+        yield return new WaitForSeconds(4);
+
+        maxDefense.Stop();
+
     }
 
 }
